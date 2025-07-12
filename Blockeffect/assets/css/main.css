@@ -6143,9 +6143,9 @@ div:nth-of-type(2n) > .rank-item {
 
 .contact__wrapper-single {
     border-radius: 10px;
-    background-image: -moz-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
-    background-image: -webkit-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
-    background-image: -ms-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
 }
 
 .contact__wrapper-single .form--control-2 {
