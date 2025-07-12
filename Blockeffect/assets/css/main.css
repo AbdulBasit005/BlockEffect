@@ -6026,8 +6026,8 @@ div:nth-of-type(2n) > .rank-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #0eb8d9;
-    color: #0eb8d9;
+    /* border: 1px solid transparent; */
+    color: white;
     margin: 0 auto 20px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -6048,19 +6048,25 @@ div:nth-of-type(2n) > .rank-item {
 }
 
 .feat-item.active .feat-icon, .feat-item:hover .feat-icon {
-    border: 1px solid #0eb8d9;
-    background: #0eb8d9;
+    /* border: 1px solid #0eb8d9; */
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
     color: #fff;
 }
 
 .theme-style-1 .feat-item .feat-icon {
-    border: 1px solid #155eef;
-    color: #155eef;
+    /* border: 1px solid #155eef; */
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
 }
 
 .theme-style-1 .feat-item.active .feat-icon, .theme-style-1 .feat-item:hover .feat-icon {
-    border: 1px solid #155eef;
-    background: #155eef;
+    /* border: 1px solid #155eef; */
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
     color: #fff;
 }
 
