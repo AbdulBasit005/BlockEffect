@@ -6176,9 +6176,9 @@ div:nth-of-type(2n) > .rank-item {
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    background-image: -moz-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
-    background-image: -webkit-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
-    background-image: -ms-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
     color: #fff;
     display: flex;
     justify-content: center;
