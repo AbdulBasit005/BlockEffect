@@ -652,7 +652,7 @@ h1 a:hover,
     h4 a:hover,
     h5 a:hover,
     h6 a:hover {
-    color: #155eef;
+    color: #b023f1;
 }
 
 h1 {
@@ -1074,7 +1074,7 @@ select {
 
 .section-header.section-header-2 .titles-area {
     padding-left: 20px;
-    border-left: 3px solid #155eef;
+    border-left: 3px solid #b023f1;
 }
 
 .section-header.section-header-2.cl-white .titles-area {
@@ -1136,7 +1136,7 @@ select {
 }
 
 *::selection {
-    background: #1652f0;
+    background: #b023f1;
     color: #fff;
 }
 
@@ -1747,7 +1747,7 @@ select {
 
     .menu li .submenu li a.active {
         padding-left: 20px;
-        background: #155eef;
+        background: #b023f1;
         color: #fff;
     }
 
@@ -1757,7 +1757,7 @@ select {
 
     .menu li .submenu li:hover > a {
         padding-left: 20px;
-        background: #155eef;
+        background: #b023f1;
         color: #fff;
     }
 
@@ -3004,7 +3004,7 @@ body[class*="bg"] .select-bar .list {
 
 .documents-box:hover .download-btn, .documents-box.active .download-btn {
     background: #fff;
-    color: #1652f0;
+    color: #b023f1;
 }
 
 /*Faqs Seciton*/
@@ -3115,7 +3115,7 @@ body[class*="bg"] .select-bar .list {
 }
 
 .faq-item.open .faq-title .plus::before, .faq-item.open .faq-title .plus::after {
-    background: #1652f0;
+    background: #b023f1;
 }
 
 .faq-item.active .faq-content {
@@ -3151,7 +3151,7 @@ body[class*="bg"] .select-bar .list {
 .faq-wrapper-2 .faq-item.open {
     border-radius: 5px;
     color: #fff;
-    background: #1652f0;
+    background: #b023f1;
 }
 
 .faq-wrapper-2 .faq-item.open .faq-title {
@@ -3215,7 +3215,7 @@ body[class*="bg"] .select-bar .list {
 }
 
 .form--control-2:focus {
-    border-color: #155eef;
+    border-color: #b023f1;
     box-shadow: none;
     outline: none;
 }
@@ -3440,7 +3440,7 @@ textarea.form--control {
 }
 
 .structure-item:hover {
-    background: #1652f0;
+    background: #b023f1;
 }
 
 .structure-item.structure-item-2 {
@@ -6200,7 +6200,7 @@ div:nth-of-type(2n) > .rank-item {
 .contact__single-item .content .title {
     margin: 0;
     font-weight: 600;
-    color: #155eef;
+    color: #b023f1;
 }
 
 .contact__single-item .content span, .contact__single-item .content a {
@@ -7515,9 +7515,9 @@ button.cmn--btn {
     height: 50px;
 }
 
-.cl-1 {
+/* .cl-1 {
     color: #1652f0 !important;
-}
+} */
 
 .bg-1 {
     background: #1652f0 !important;
