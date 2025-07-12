@@ -250,7 +250,7 @@
     <!-- Benifit Token Section -->
 
     <!-- Enhanced Currency Calculator Section -->
-    <section class="calculation-section bg--half-dark position-relative overflow-hidden">
+    <section class="calculation-section " style="background: #fff;"></section>
         <!-- Background Elements -->
         <div class="calculator-bg-shapes">
             <div class="calc-circle-1"></div>
@@ -275,40 +275,47 @@
                                 <!-- From Currency -->
                                 <div class="col-lg-6">
                                     <div class="currency-input-group">
-                                        <label class="currency-label">From</label>
+                                        <label class="currency-label">
+                                            <i class="fas fa-arrow-down text-success me-2"></i>From
+                                        </label>
                                         <div class="currency-input-wrapper">
+                                            <div class="currency-symbol-display from-symbol">$</div>
                                             <input type="number" id="fromAmount" class="form-control currency-input" 
                                                    placeholder="1.00" value="1" min="0" step="0.01">
                                             <div class="currency-select-wrapper">
                                                 <select id="fromCurrency" class="currency-select">
-                                                    <option value="BTC" data-symbol="₿">Bitcoin (BTC)</option>
-                                                    <option value="ETH" data-symbol="Ξ">Ethereum (ETH)</option>
-                                                    <option value="USDT" data-symbol="₮">Tether (USDT)</option>
-                                                    <option value="BNB" data-symbol="BNB">Binance Coin (BNB)</option>
-                                                    <option value="ADA" data-symbol="₳">Cardano (ADA)</option>
-                                                    <option value="DOT" data-symbol="●">Polkadot (DOT)</option>
-                                                    <option value="LINK" data-symbol="🔗">Chainlink (LINK)</option>
-                                                    <option value="XRP" data-symbol="✖">Ripple (XRP)</option>
-                                                    <option value="LTC" data-symbol="Ł">Litecoin (LTC)</option>
-                                                    <option value="BCH" data-symbol="₿">Bitcoin Cash (BCH)</option>
-                                                    <option value="USD" data-symbol="$" selected>US Dollar (USD)</option>
-                                                    <option value="EUR" data-symbol="€">Euro (EUR)</option>
-                                                    <option value="GBP" data-symbol="£">British Pound (GBP)</option>
-                                                    <option value="JPY" data-symbol="¥">Japanese Yen (JPY)</option>
-                                                    <option value="CAD" data-symbol="C$">Canadian Dollar (CAD)</option>
-                                                    <option value="AUD" data-symbol="A$">Australian Dollar (AUD)</option>
-                                                    <option value="CHF" data-symbol="CHF">Swiss Franc (CHF)</option>
-                                                    <option value="CNY" data-symbol="¥">Chinese Yuan (CNY)</option>
-                                                    <option value="INR" data-symbol="₹">Indian Rupee (INR)</option>
+                                                    <option value="BTC" data-symbol="₿" data-name="Bitcoin">Bitcoin (BTC)</option>
+                                                    <option value="ETH" data-symbol="Ξ" data-name="Ethereum">Ethereum (ETH)</option>
+                                                    <option value="USDT" data-symbol="₮" data-name="Tether">Tether (USDT)</option>
+                                                    <option value="BNB" data-symbol="BNB" data-name="Binance Coin">Binance Coin (BNB)</option>
+                                                    <option value="ADA" data-symbol="₳" data-name="Cardano">Cardano (ADA)</option>
+                                                    <option value="DOT" data-symbol="●" data-name="Polkadot">Polkadot (DOT)</option>
+                                                    <option value="LINK" data-symbol="🔗" data-name="Chainlink">Chainlink (LINK)</option>
+                                                    <option value="XRP" data-symbol="✖" data-name="Ripple">Ripple (XRP)</option>
+                                                    <option value="LTC" data-symbol="Ł" data-name="Litecoin">Litecoin (LTC)</option>
+                                                    <option value="BCH" data-symbol="₿" data-name="Bitcoin Cash">Bitcoin Cash (BCH)</option>
+                                                    <option value="USD" data-symbol="$" data-name="US Dollar" selected>US Dollar (USD)</option>
+                                                    <option value="EUR" data-symbol="€" data-name="Euro">Euro (EUR)</option>
+                                                    <option value="GBP" data-symbol="£" data-name="British Pound">British Pound (GBP)</option>
+                                                    <option value="JPY" data-symbol="¥" data-name="Japanese Yen">Japanese Yen (JPY)</option>
+                                                    <option value="CAD" data-symbol="C$" data-name="Canadian Dollar">Canadian Dollar (CAD)</option>
+                                                    <option value="AUD" data-symbol="A$" data-name="Australian Dollar">Australian Dollar (AUD)</option>
+                                                    <option value="CHF" data-symbol="CHF" data-name="Swiss Franc">Swiss Franc (CHF)</option>
+                                                    <option value="CNY" data-symbol="¥" data-name="Chinese Yuan">Chinese Yuan (CNY)</option>
+                                                    <option value="INR" data-symbol="₹" data-name="Indian Rupee">Indian Rupee (INR)</option>
                                                 </select>
                                             </div>
+                                        </div>
+                                        <div class="currency-info">
+                                            <span class="currency-name" id="fromCurrencyName">US Dollar</span>
+                                            <span class="currency-rate" id="fromCurrencyRate">1 USD = $1.00</span>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <!-- Swap Button -->
                                 <div class="col-12 text-center">
-                                    <button type="button" id="swapBtn" class="swap-btn">
+                                    <button type="button" id="swapBtn" class="swap-btn" title="Swap Currencies">
                                         <i class="fas fa-exchange-alt"></i>
                                     </button>
                                 </div>
@@ -316,59 +323,77 @@
                                 <!-- To Currency -->
                                 <div class="col-lg-6">
                                     <div class="currency-input-group">
-                                        <label class="currency-label">To</label>
+                                        <label class="currency-label">
+                                            <i class="fas fa-arrow-up text-primary me-2"></i>To
+                                        </label>
                                         <div class="currency-input-wrapper">
-                                            <input type="number" id="toAmount" class="form-control currency-input" 
+                                            <div class="currency-symbol-display to-symbol">$</div>
+                                            <input type="text" id="toAmount" class="form-control currency-input" 
                                                    placeholder="0.00" readonly>
                                             <div class="currency-select-wrapper">
                                                 <select id="toCurrency" class="currency-select">
-                                                    <option value="USD" data-symbol="$" selected>US Dollar (USD)</option>
-                                                    <option value="EUR" data-symbol="€">Euro (EUR)</option>
-                                                    <option value="GBP" data-symbol="£">British Pound (GBP)</option>
-                                                    <option value="JPY" data-symbol="¥">Japanese Yen (JPY)</option>
-                                                    <option value="CAD" data-symbol="C$">Canadian Dollar (CAD)</option>
-                                                    <option value="AUD" data-symbol="A$">Australian Dollar (AUD)</option>
-                                                    <option value="CHF" data-symbol="CHF">Swiss Franc (CHF)</option>
-                                                    <option value="CNY" data-symbol="¥">Chinese Yuan (CNY)</option>
-                                                    <option value="INR" data-symbol="₹">Indian Rupee (INR)</option>
-                                                    <option value="BTC" data-symbol="₿">Bitcoin (BTC)</option>
-                                                    <option value="ETH" data-symbol="Ξ">Ethereum (ETH)</option>
-                                                    <option value="USDT" data-symbol="₮">Tether (USDT)</option>
-                                                    <option value="BNB" data-symbol="BNB">Binance Coin (BNB)</option>
-                                                    <option value="ADA" data-symbol="₳">Cardano (ADA)</option>
-                                                    <option value="DOT" data-symbol="●">Polkadot (DOT)</option>
-                                                    <option value="LINK" data-symbol="🔗">Chainlink (LINK)</option>
-                                                    <option value="XRP" data-symbol="✖">Ripple (XRP)</option>
-                                                    <option value="LTC" data-symbol="Ł">Litecoin (LTC)</option>
-                                                    <option value="BCH" data-symbol="₿">Bitcoin Cash (BCH)</option>
+                                                    <option value="USD" data-symbol="$" data-name="US Dollar" selected>US Dollar (USD)</option>
+                                                    <option value="EUR" data-symbol="€" data-name="Euro">Euro (EUR)</option>
+                                                    <option value="GBP" data-symbol="£" data-name="British Pound">British Pound (GBP)</option>
+                                                    <option value="JPY" data-symbol="¥" data-name="Japanese Yen">Japanese Yen (JPY)</option>
+                                                    <option value="CAD" data-symbol="C$" data-name="Canadian Dollar">Canadian Dollar (CAD)</option>
+                                                    <option value="AUD" data-symbol="A$" data-name="Australian Dollar">Australian Dollar (AUD)</option>
+                                                    <option value="CHF" data-symbol="CHF" data-name="Swiss Franc">Swiss Franc (CHF)</option>
+                                                    <option value="CNY" data-symbol="¥" data-name="Chinese Yuan">Chinese Yuan (CNY)</option>
+                                                    <option value="INR" data-symbol="₹" data-name="Indian Rupee">Indian Rupee (INR)</option>
+                                                    <option value="BTC" data-symbol="₿" data-name="Bitcoin">Bitcoin (BTC)</option>
+                                                    <option value="ETH" data-symbol="Ξ" data-name="Ethereum">Ethereum (ETH)</option>
+                                                    <option value="USDT" data-symbol="₮" data-name="Tether">Tether (USDT)</option>
+                                                    <option value="BNB" data-symbol="BNB" data-name="Binance Coin">Binance Coin (BNB)</option>
+                                                    <option value="ADA" data-symbol="₳" data-name="Cardano">Cardano (ADA)</option>
+                                                    <option value="DOT" data-symbol="●" data-name="Polkadot">Polkadot (DOT)</option>
+                                                    <option value="LINK" data-symbol="🔗" data-name="Chainlink">Chainlink (LINK)</option>
+                                                    <option value="XRP" data-symbol="✖" data-name="Ripple">Ripple (XRP)</option>
+                                                    <option value="LTC" data-symbol="Ł" data-name="Litecoin">Litecoin (LTC)</option>
+                                                    <option value="BCH" data-symbol="₿" data-name="Bitcoin Cash">Bitcoin Cash (BCH)</option>
                                                 </select>
+                                            </div>
+                                        </div>
+                                        <div class="currency-info">
+                                            <span class="currency-name" id="toCurrencyName">US Dollar</span>
+                                            <span class="currency-rate" id="toCurrencyRate">1 USD = $1.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Enhanced Exchange Rate Display -->
+                                <div class="col-12">
+                                    <div class="exchange-rate-display">
+                                        <div class="rate-info">
+                                            <span class="rate-label">
+                                                <i class="fas fa-chart-line me-2"></i>Exchange Rate:
+                                            </span>
+                                            <span id="exchangeRate" class="rate-value">1 USD = 1.00 USD</span>
+                                        </div>
+                                        <div class="rate-details">
+                                            <div class="rate-change">
+                                                <span class="change-label">24h Change:</span>
+                                                <span id="rateChange" class="change-value positive">+2.5%</span>
+                                            </div>
+                                            <div class="last-updated">
+                                                <i class="fas fa-clock"></i>
+                                                <span id="lastUpdated">Last updated: Just now</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <!-- Exchange Rate Display -->
-                                <div class="col-12">
-                                    <div class="exchange-rate-display">
-                                        <div class="rate-info">
-                                            <span class="rate-label">Exchange Rate:</span>
-                                            <span id="exchangeRate" class="rate-value">1 USD = 1.00 USD</span>
-                                        </div>
-                                        <div class="last-updated">
-                                            <i class="fas fa-clock"></i>
-                                            <span id="lastUpdated">Last updated: Just now</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Action Buttons -->
+                                <!-- Enhanced Action Buttons -->
                                 <div class="col-12 text-center">
                                     <div class="calculator-actions">
                                         <button type="button" id="convertBtn" class="cmn--btn bg-7 h--60px px-5 me-3">
-                                            <i class="fas fa-calculator me-2"></i>Convert
+                                            <i class="fas fa-calculator me-2"></i>Convert Now
                                         </button>
-                                        <button type="button" id="resetBtn" class="cmn--btn btn--transparent h--60px px-4">
+                                        <button type="button" id="resetBtn" class="cmn--btn btn--transparent h--60px px-4 me-3">
                                             <i class="fas fa-redo me-2"></i>Reset
+                                        </button>
+                                        <button type="button" id="historyBtn" class="cmn--btn btn--outline h--60px px-4">
+                                            <i class="fas fa-history me-2"></i>History
                                         </button>
                                     </div>
                                 </div>
