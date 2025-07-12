@@ -252,3 +252,485 @@
     });
   });
 })(jQuery);
+
+    // Enhanced Currency Calculator Functionality
+    
+    // Exchange rates (simulated - in real app, these would come from an API)
+    const exchangeRates = {
+        // Crypto to USD rates (simulated)
+        BTC: 45000,
+        ETH: 3200,
+        USDT: 1,
+        BNB: 380,
+        ADA: 0.45,
+        DOT: 7.2,
+        LINK: 15.5,
+        XRP: 0.52,
+        LTC: 120,
+        BCH: 280,
+        
+        // Fiat currency rates (simulated)
+        USD: 1,
+        EUR: 0.85,
+        GBP: 0.73,
+        JPY: 110.5,
+        CAD: 1.25,
+        AUD: 1.35,
+        CHF: 0.92,
+        CNY: 6.45,
+        INR: 74.5
+    };
+    
+    // Initialize calculator when DOM is ready
+    $(document).ready(function() {
+        initializeCurrencyCalculator();
+    });
+    
+    function initializeCurrencyCalculator() {
+        const fromAmount = $('#fromAmount');
+        const toAmount = $('#toAmount');
+        const fromCurrency = $('#fromCurrency');
+        const toCurrency = $('#toCurrency');
+        const convertBtn = $('#convertBtn');
+        const resetBtn = $('#resetBtn');
+        const swapBtn = $('#swapBtn');
+        const historyBtn = $('#historyBtn');
+        const exchangeRate = $('#exchangeRate');
+        const lastUpdated = $('#lastUpdated');
+        const rateChange = $('#rateChange');
+        
+        // Currency symbol displays
+        const fromSymbol = $('.from-symbol');
+        const toSymbol = $('.to-symbol');
+        const fromCurrencyName = $('#fromCurrencyName');
+        const toCurrencyName = $('#toCurrencyName');
+        const fromCurrencyRate = $('#fromCurrencyRate');
+        const toCurrencyRate = $('#toCurrencyRate');
+        
+        // Set initial values
+        fromAmount.val(1);
+        updateCurrencySymbols();
+        updateCurrencyInfo();
+        updateExchangeRate();
+        updatePopularConversions();
+        updateRateChange();
+        
+        // Real-time conversion on input change
+        fromAmount.on('input', function() {
+            if ($(this).val() !== '') {
+                convertCurrency();
+            } else {
+                toAmount.val('');
+            }
+        });
+        
+        // Convert on currency change
+        fromCurrency.on('change', function() {
+            updateCurrencySymbols();
+            updateCurrencyInfo();
+            convertCurrency();
+            updateExchangeRate();
+        });
+        
+        toCurrency.on('change', function() {
+            updateCurrencySymbols();
+            updateCurrencyInfo();
+            convertCurrency();
+            updateExchangeRate();
+        });
+        
+        // Convert button click
+        convertBtn.on('click', function() {
+            if (fromAmount.val() === '' || fromAmount.val() <= 0) {
+                showCalculatorError('Please enter a valid amount');
+                return;
+            }
+            
+            convertCurrency();
+            showCalculatorSuccess('Conversion completed successfully!');
+        });
+        
+        // Reset button click
+        resetBtn.on('click', function() {
+            fromAmount.val(1);
+            toAmount.val('');
+            fromCurrency.val('USD');
+            toCurrency.val('USD');
+            updateCurrencySymbols();
+            updateCurrencyInfo();
+            updateExchangeRate();
+            showCalculatorSuccess('Calculator reset successfully!');
+        });
+        
+        // History button click
+        historyBtn.on('click', function() {
+            showCalculatorInfo('Conversion history feature coming soon!');
+        });
+        
+        // Swap currencies
+        swapBtn.on('click', function() {
+            const tempAmount = fromAmount.val();
+            const tempCurrency = fromCurrency.val();
+            
+            fromAmount.val(toAmount.val());
+            toAmount.val(tempAmount);
+            fromCurrency.val(toCurrency.val());
+            toCurrency.val(tempCurrency);
+            
+            updateCurrencySymbols();
+            updateCurrencyInfo();
+            convertCurrency();
+            updateExchangeRate();
+            
+            // Add rotation animation
+            $(this).addClass('rotating');
+            setTimeout(() => {
+                $(this).removeClass('rotating');
+            }, 300);
+        });
+        
+        // Quick conversion clicks
+        $('.quick-conversion').on('click', function() {
+            const from = $(this).data('from');
+            const to = $(this).data('to');
+            
+            fromCurrency.val(from);
+            toCurrency.val(to);
+            fromAmount.val(1);
+            
+            updateCurrencySymbols();
+            updateCurrencyInfo();
+            convertCurrency();
+            updateExchangeRate();
+            
+            // Highlight the clicked conversion
+            $('.quick-conversion').removeClass('active');
+            $(this).addClass('active');
+        });
+        
+        // Update currency symbols
+        function updateCurrencySymbols() {
+            const fromSymbolValue = fromCurrency.find('option:selected').data('symbol');
+            const toSymbolValue = toCurrency.find('option:selected').data('symbol');
+            
+            fromSymbol.text(fromSymbolValue);
+            toSymbol.text(toSymbolValue);
+        }
+        
+        // Update currency info
+        function updateCurrencyInfo() {
+            const fromName = fromCurrency.find('option:selected').data('name');
+            const toName = toCurrency.find('option:selected').data('name');
+            const fromSymbol = fromCurrency.find('option:selected').data('symbol');
+            const toSymbol = toCurrency.find('option:selected').data('symbol');
+            
+            fromCurrencyName.text(fromName);
+            toCurrencyName.text(toName);
+            
+            // Update rate displays
+            const fromRate = exchangeRates[fromCurrency.val()] || 1;
+            const toRate = exchangeRates[toCurrency.val()] || 1;
+            
+            fromCurrencyRate.text(`1 ${fromCurrency.val()} = ${formatCurrencyWithSymbol(fromRate, 'USD')}`);
+            toCurrencyRate.text(`1 ${toCurrency.val()} = ${formatCurrencyWithSymbol(toRate, 'USD')}`);
+        }
+        
+        // Update rate change
+        function updateRateChange() {
+            const change = (Math.random() - 0.5) * 10; // Random change between -5% and +5%
+            const isPositive = change >= 0;
+            
+            rateChange.text(`${isPositive ? '+' : ''}${change.toFixed(1)}%`);
+            rateChange.removeClass('positive negative').addClass(isPositive ? 'positive' : 'negative');
+        }
+        
+        // Convert currency function
+        function convertCurrency() {
+            const amount = parseFloat(fromAmount.val());
+            const from = fromCurrency.val();
+            const to = toCurrency.val();
+            
+            if (isNaN(amount) || amount <= 0) {
+                toAmount.val('');
+                return;
+            }
+            
+            // Get exchange rates
+            const fromRate = exchangeRates[from] || 1;
+            const toRate = exchangeRates[to] || 1;
+            
+            // Convert to USD first, then to target currency
+            const usdAmount = amount * fromRate;
+            const convertedAmount = usdAmount / toRate;
+            
+            // Format the result with currency symbol
+            const formattedAmount = formatCurrencyWithSymbol(convertedAmount, to);
+            toAmount.val(formattedAmount);
+            
+            // Update exchange rate display
+            updateExchangeRate();
+        }
+        
+        // Update exchange rate display
+        function updateExchangeRate() {
+            const from = fromCurrency.val();
+            const to = toCurrency.val();
+            const fromRate = exchangeRates[from] || 1;
+            const toRate = exchangeRates[to] || 1;
+            const rate = fromRate / toRate;
+            
+            const formattedRate = formatCurrencyWithSymbol(rate, to);
+            exchangeRate.text(`1 ${from} = ${formattedRate}`);
+            
+            // Update last updated time
+            const now = new Date();
+            lastUpdated.text(`Last updated: ${now.toLocaleTimeString()}`);
+        }
+        
+        // Update popular conversions
+        function updatePopularConversions() {
+            // BTC to USD
+            const btcUsd = formatCurrencyWithSymbol(exchangeRates.BTC, 'USD');
+            $('#btc-usd').text(btcUsd);
+            
+            // ETH to USD
+            const ethUsd = formatCurrencyWithSymbol(exchangeRates.ETH, 'USD');
+            $('#eth-usd').text(ethUsd);
+            
+            // USD to EUR
+            const usdEur = formatCurrencyWithSymbol(1 / exchangeRates.EUR, 'EUR');
+            $('#usd-eur').text(usdEur);
+            
+            // USD to GBP
+            const usdGbp = formatCurrencyWithSymbol(1 / exchangeRates.GBP, 'GBP');
+            $('#usd-gbp').text(usdGbp);
+        }
+        
+        // Format currency with symbol (for display in input)
+        function formatCurrencyWithSymbol(amount, currency) {
+            const symbols = {
+                USD: '$',
+                EUR: '€',
+                GBP: '£',
+                JPY: '¥',
+                CAD: 'C$',
+                AUD: 'A$',
+                CHF: 'CHF',
+                CNY: '¥',
+                INR: '₹',
+                BTC: '₿',
+                ETH: 'Ξ',
+                USDT: '₮',
+                BNB: 'BNB',
+                ADA: '₳',
+                DOT: '●',
+                LINK: '🔗',
+                XRP: '✖',
+                LTC: 'Ł',
+                BCH: '₿'
+            };
+            
+            const symbol = symbols[currency] || currency;
+            
+            // Determine decimal places based on currency
+            let decimals = 2;
+            if (currency === 'JPY' || currency === 'INR') decimals = 0;
+            if (['BTC', 'ETH', 'BNB', 'ADA', 'DOT', 'LINK', 'XRP', 'LTC', 'BCH'].includes(currency)) decimals = 6;
+            
+            const formatted = parseFloat(amount).toFixed(decimals);
+            
+            // Add thousand separators
+            const parts = formatted.split('.');
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            
+            return symbol + parts.join('.');
+        }
+        
+        // Format currency without symbol (for calculations)
+        function formatCurrency(amount, currency) {
+            const symbols = {
+                USD: '$',
+                EUR: '€',
+                GBP: '£',
+                JPY: '¥',
+                CAD: 'C$',
+                AUD: 'A$',
+                CHF: 'CHF',
+                CNY: '¥',
+                INR: '₹',
+                BTC: '₿',
+                ETH: 'Ξ',
+                USDT: '₮',
+                BNB: 'BNB',
+                ADA: '₳',
+                DOT: '●',
+                LINK: '🔗',
+                XRP: '✖',
+                LTC: 'Ł',
+                BCH: '₿'
+            };
+            
+            const symbol = symbols[currency] || currency;
+            
+            // Determine decimal places based on currency
+            let decimals = 2;
+            if (currency === 'JPY' || currency === 'INR') decimals = 0;
+            if (['BTC', 'ETH', 'BNB', 'ADA', 'DOT', 'LINK', 'XRP', 'LTC', 'BCH'].includes(currency)) decimals = 6;
+            
+            const formatted = parseFloat(amount).toFixed(decimals);
+            
+            // Add thousand separators
+            const parts = formatted.split('.');
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            
+            return symbol + parts.join('.');
+        }
+        
+        // Show calculator error
+        function showCalculatorError(message) {
+            const errorDiv = $('<div class="calculator-error">' + message + '</div>');
+            $('.calculator-card').append(errorDiv);
+            
+            errorDiv.css({
+                position: 'absolute',
+                top: '10px',
+                right: '10px',
+                background: '#dc3545',
+                color: 'white',
+                padding: '10px 15px',
+                borderRadius: '5px',
+                fontSize: '14px',
+                zIndex: 1000,
+                animation: 'slideInRight 0.3s ease'
+            });
+            
+            setTimeout(() => {
+                errorDiv.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            }, 3000);
+        }
+        
+        // Show calculator success
+        function showCalculatorSuccess(message) {
+            const successDiv = $('<div class="calculator-success">' + message + '</div>');
+            $('.calculator-card').append(successDiv);
+            
+            successDiv.css({
+                position: 'absolute',
+                top: '10px',
+                right: '10px',
+                background: '#28a745',
+                color: 'white',
+                padding: '10px 15px',
+                borderRadius: '5px',
+                fontSize: '14px',
+                zIndex: 1000,
+                animation: 'slideInRight 0.3s ease'
+            });
+            
+            setTimeout(() => {
+                successDiv.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            }, 3000);
+        }
+        
+        // Show calculator info
+        function showCalculatorInfo(message) {
+            const infoDiv = $('<div class="calculator-info">' + message + '</div>');
+            $('.calculator-card').append(infoDiv);
+            
+            infoDiv.css({
+                position: 'absolute',
+                top: '10px',
+                right: '10px',
+                background: '#17a2b8',
+                color: 'white',
+                padding: '10px 15px',
+                borderRadius: '5px',
+                fontSize: '14px',
+                zIndex: 1000,
+                animation: 'slideInRight 0.3s ease'
+            });
+            
+            setTimeout(() => {
+                infoDiv.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            }, 3000);
+        }
+        
+        // Simulate real-time rate updates
+        setInterval(function() {
+            // Simulate small rate fluctuations
+            Object.keys(exchangeRates).forEach(currency => {
+                if (currency !== 'USD' && currency !== 'USDT') {
+                    const fluctuation = (Math.random() - 0.5) * 0.02; // ±1% fluctuation
+                    exchangeRates[currency] *= (1 + fluctuation);
+                }
+            });
+            
+            updatePopularConversions();
+            updateRateChange();
+            if (fromAmount.val() !== '') {
+                convertCurrency();
+            }
+        }, 30000); // Update every 30 seconds
+        
+        // Add CSS for animations
+        const calculatorCSS = `
+            <style>
+                @keyframes slideInRight {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                
+                .swap-btn.rotating {
+                    animation: rotate 0.3s ease;
+                }
+                
+                @keyframes rotate {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(180deg); }
+                }
+                
+                .quick-conversion.active {
+                    background: rgba(0, 123, 255, 0.2);
+                    border-color: #007bff;
+                }
+                
+                .calculator-error,
+                .calculator-success,
+                .calculator-info {
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                    font-weight: 500;
+                }
+                
+                .currency-input:focus {
+                    background: rgba(255, 255, 255, 0.15);
+                }
+                
+                .currency-select:focus {
+                    background: rgba(0, 123, 255, 0.4);
+                }
+                
+                .currency-symbol-display {
+                    animation: symbolGlow 2s ease-in-out infinite;
+                }
+                
+                @keyframes symbolGlow {
+                    0%, 100% { opacity: 0.8; }
+                    50% { opacity: 1; text-shadow: 0 0 10px currentColor; }
+                }
+            </style>
+        `;
+        $('head').append(calculatorCSS);
+    }
+    
+    // Initialize calculator on page load
+    $(window).on('load', function() {
+        if ($('.currency-calculator').length) {
+            initializeCurrencyCalculator();
+        }
+    });
