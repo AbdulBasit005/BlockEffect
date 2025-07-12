@@ -822,9 +822,9 @@ select {
 }
 
 .bg--theme-1, .subscribe-form button, .team-box:hover .team-content, .documents-box .download-btn, .documents-box:hover .documents-box-inner, .documents-box.active .documents-box-inner, .nav--tabs .nav-item .nav-link.active, .about--list li::before, .road__map__item .road__map__info::after, .toTopBtn, .cmn--btn, .cmn--btn.btn--white::before, .cmn--btn.btn--rgba::before {
-    background: -moz-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
-    background: -webkit-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
-    background: -ms-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
 }
 
 .bg--theme-2, .hero-section-2, .nav--tabs.cl-2 .nav-item .nav-link.active, .bg-2, .token__card, .token__card::before {
@@ -6068,9 +6068,9 @@ div:nth-of-type(2n) > .rank-item {
     position: absolute;
     inset: 0;
     bottom: 145px;
-    background-image: -moz-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
-    background-image: -webkit-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
-    background-image: -ms-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
 }
 
 .counter-wrapper {
@@ -6092,9 +6092,9 @@ div:nth-of-type(2n) > .rank-item {
 
 .cta-wrapper-2 {
     position: relative;
-    background-image: -moz-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
-    background-image: -webkit-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
-    background-image: -ms-linear-gradient(0deg, #194fff 0%, #25b0ff 100%);
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
     padding: 70px;
     border-radius: 30px;
 }
