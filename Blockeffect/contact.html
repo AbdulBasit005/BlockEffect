@@ -36,8 +36,8 @@
     <!-- ==========Preloader Ends Here========== -->
 
     
-    <!-- Header Section -->
-    <header class="header-section">
+       <!-- Header Section -->
+    <header class="header-section" style="width:100vw; min-width:100%; background-size:cover; background-position:center; background-repeat:no-repeat;">
         <div class="container">
             <div class="header-area">
                 <div class="logo me-auto">
@@ -57,12 +57,27 @@
                         <a href="Projects.html">Projects</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="contact">Contact Us</a>
                     </li>
                 </ul>
                 <div class="header-buttons d-none d-md-flex">
-                    <a href="#0" class="cmn--btn btn--transparent btn-pill">Get In Touch</a>
+                    <a href="#0" class="cmn--btn btn--transparent btn-pill header-btn-white-hover">Get In Touch</a>
                 </div>
+                <style>
+                    .header-btn-white-hover:hover,
+                    .header-btn-white-hover:focus {
+                        background: #fff !important;
+                        color: #222 !important;
+                        border-color: #fff !important;
+                        transition: all 0.2s;
+                    }
+                    /* Purple color for sticky header */
+                    .header-section.sticky {
+                        background: linear-gradient(90deg, #7b2ff2 0%, #f357a8 100%) !important;
+                        /* You can adjust the purple gradient as needed */
+                        transition: background 0.3s;
+                    }
+                </style>
                 <div class="header-bar d-lg-none ms-3">
                     <span></span>
                     <span></span>
@@ -70,9 +85,19 @@
                 </div>
             </div>
         </div>
+        <script>
+            // Sticky header color change on scroll
+            window.addEventListener('scroll', function() {
+                var header = document.querySelector('.header-section');
+                if (window.scrollY > 10) {
+                    header.classList.add('sticky');
+                } else {
+                    header.classList.remove('sticky');
+                }
+            });
+        </script>
     </header>
     <!-- Header Section -->
-
 
     <!-- Hero Section -->
     <section class="page-header-section">
