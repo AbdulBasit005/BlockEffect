@@ -2077,7 +2077,7 @@ body[class*="bg"] .select-bar .list {
 }
 
 .hero-token-sell .cmn--btn {
-    background: #703be3;
+    background: #b023f1;
 }
 
 @media (min-width: 576px) {
@@ -7013,7 +7013,9 @@ div:nth-of-type(2n) > .rank-item {
     height: 100%;
     position: fixed;
     z-index: 999999;
-    background: #155eef;
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7041,7 +7043,9 @@ div:nth-of-type(2n) > .rank-item {
     vertical-align: top;
     display: inline-block;
     width: 100%;
-    background-color: #fff;
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
     -webkit-animation: loader-inner 2.5s infinite ease-in;
     animation: loader-inner 2.5s infinite ease-in;
 }
