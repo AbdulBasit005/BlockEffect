@@ -70,6 +70,12 @@
                         border-color: #fff !important;
                         transition: all 0.2s;
                     }
+                    /* Purple color for sticky header */
+                    .header-section.sticky {
+                        background: linear-gradient(90deg, #7b2ff2 0%, #f357a8 100%) !important;
+                        /* You can adjust the purple gradient as needed */
+                        transition: background 0.3s;
+                    }
                 </style>
                 <div class="header-bar d-lg-none ms-3">
                     <span></span>
@@ -78,6 +84,17 @@
                 </div>
             </div>
         </div>
+        <script>
+            // Sticky header color change on scroll
+            window.addEventListener('scroll', function() {
+                var header = document.querySelector('.header-section');
+                if (window.scrollY > 10) {
+                    header.classList.add('sticky');
+                } else {
+                    header.classList.remove('sticky');
+                }
+            });
+        </script>
     </header>
     <!-- Header Section -->
 
