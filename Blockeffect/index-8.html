@@ -250,40 +250,31 @@
     <!-- Benifit Token Section -->
 
     <!-- Enhanced Currency Calculator Section -->
-    <section class="calculation-section " style="background: #fff;"></section>
-        <!-- Background Elements -->
-        <div class="calculator-bg-shapes">
-            <div class="calc-circle-1"></div>
-            <div class="calc-circle-2"></div>
-            <div class="calc-floating-shape shape-1"></div>
-            <div class="calc-floating-shape shape-2"></div>
-        </div>
-        
-        <div class="container">
-            <div class="calculation-wrapper">
-                <div class="calculation-wrapper-inner">
-                    <div class="section-header-3 wow fadeInUp text-center">
-                        <h6 class="cate text-white mb-3">Real-Time Exchange Rates</h6>
+    <section class="calculation-section gradient-1 position-relative py-120" style="overflow:hidden;">
+        <!-- Animated Background Elements -->
+       
+        <div class="container"></div>
+                <div class="calculation-wrapper-inner rounded-4 shadow-lg bg-gradient" style="background: linear-gradient(135deg,#7b2ff2 0%,#f357a8 100%); padding: 40px 32px; position:relative;">
+                    <div class="section-header-3 text-center mb-5">
+                        <h6 class="cate text-white mb-2 animate__animated animate__fadeInDown">Real-Time Exchange Rates</h6>
                         <span class="shape"></span>
-                        <h3 class="title text-white mb-4">Crypto & Fiat Currency Calculator</h3>
-                        <p class="text-white-50 mb-5">Get instant currency conversions with live market rates</p>
+                        <h3 class="title text-white mb-3 animate__animated animate__fadeInDown">Crypto & Fiat Currency Calculator</h3>
+                        <p class="text-white-50 mb-4 animate__animated animate__fadeInDown">Get instant currency conversions with live market rates</p>
                     </div>
-                    
-                    <div class="currency-calculator wow fadeInUp">
-                        <div class="calculator-card">
-                            <div class="row g-4">
+                    <div class="currency-calculator">
+                        <div class="calculator-card p-4 rounded-3 bg-white position-relative animate__animated animate__fadeInUp" style="box-shadow:0 8px 32px rgba(123,47,242,0.12);">
+                            <div class="row g-4 align-items-center">
                                 <!-- From Currency -->
-                                <div class="col-lg-6">
+                                <div class="col-lg-5">
                                     <div class="currency-input-group">
-                                        <label class="currency-label">
+                                        <label class="currency-label text-dark fw-bold mb-2">
                                             <i class="fas fa-arrow-down text-success me-2"></i>From
                                         </label>
-                                        <div class="currency-input-wrapper">
-                                            <div class="currency-symbol-display from-symbol">$</div>
-                                            <input type="number" id="fromAmount" class="form-control currency-input" 
-                                                   placeholder="1.00" value="1" min="0" step="0.01">
-                                            <div class="currency-select-wrapper">
-                                                <select id="fromCurrency" class="currency-select">
+                                        <div class="currency-input-wrapper d-flex align-items-center gap-2">
+                                            <div class="currency-symbol-display from-symbol fs-3 fw-bold text-gradient" style="background:linear-gradient(90deg,#7b2ff2,#f357a8);-webkit-background-clip:text;color:transparent;">$</div>
+                                            <input type="number" id="fromAmount" class="form-control currency-input border-0 bg-light px-3 py-2 rounded-2 shadow-sm" placeholder="1.00" value="1" min="0" step="0.01" style="width:110px;">
+                                            <div class="currency-select-wrapper ms-2">
+                                                <select id="fromCurrency" class="currency-select form-select border-0 bg-gradient text-white fw-semibold" style="background:linear-gradient(90deg,#7b2ff2,#f357a8);color:#fff;">
                                                     <option value="BTC" data-symbol="₿" data-name="Bitcoin">Bitcoin (BTC)</option>
                                                     <option value="ETH" data-symbol="Ξ" data-name="Ethereum">Ethereum (ETH)</option>
                                                     <option value="USDT" data-symbol="₮" data-name="Tether">Tether (USDT)</option>
@@ -306,32 +297,29 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="currency-info">
-                                            <span class="currency-name" id="fromCurrencyName">US Dollar</span>
-                                            <span class="currency-rate" id="fromCurrencyRate">1 USD = $1.00</span>
+                                        <div class="currency-info mt-2">
+                                            <span class="currency-name fw-semibold" id="fromCurrencyName">US Dollar</span>
+                                            <span class="currency-rate text-muted ms-2" id="fromCurrencyRate">1 USD = $1.00</span>
                                         </div>
                                     </div>
                                 </div>
-                                
                                 <!-- Swap Button -->
-                                <div class="col-12 text-center">
-                                    <button type="button" id="swapBtn" class="swap-btn" title="Swap Currencies">
+                                <div class="col-lg-2 text-center">
+                                    <button type="button" id="swapBtn" class="swap-btn btn btn-gradient rounded-circle shadow animate__animated animate__bounceIn" title="Swap Currencies" style="width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#7b2ff2,#f357a8);color:#fff;font-size:1.5rem;">
                                         <i class="fas fa-exchange-alt"></i>
                                     </button>
                                 </div>
-                                
                                 <!-- To Currency -->
-                                <div class="col-lg-6">
+                                <div class="col-lg-5">
                                     <div class="currency-input-group">
-                                        <label class="currency-label">
+                                        <label class="currency-label text-dark fw-bold mb-2">
                                             <i class="fas fa-arrow-up text-primary me-2"></i>To
                                         </label>
-                                        <div class="currency-input-wrapper">
-                                            <div class="currency-symbol-display to-symbol">$</div>
-                                            <input type="text" id="toAmount" class="form-control currency-input" 
-                                                   placeholder="0.00" readonly>
-                                            <div class="currency-select-wrapper">
-                                                <select id="toCurrency" class="currency-select">
+                                        <div class="currency-input-wrapper d-flex align-items-center gap-2">
+                                            <div class="currency-symbol-display to-symbol fs-3 fw-bold text-gradient" style="background:linear-gradient(90deg,#f357a8,#7b2ff2);-webkit-background-clip:text;color:transparent;">$</div>
+                                            <input type="text" id="toAmount" class="form-control currency-input border-0 bg-light px-3 py-2 rounded-2 shadow-sm" placeholder="0.00" readonly style="width:110px;">
+                                            <div class="currency-select-wrapper ms-2">
+                                                <select id="toCurrency" class="currency-select form-select border-0 bg-gradient text-white fw-semibold" style="background:linear-gradient(90deg,#f357a8,#7b2ff2);color:#fff;">
                                                     <option value="USD" data-symbol="$" data-name="US Dollar" selected>US Dollar (USD)</option>
                                                     <option value="EUR" data-symbol="€" data-name="Euro">Euro (EUR)</option>
                                                     <option value="GBP" data-symbol="£" data-name="British Pound">British Pound (GBP)</option>
@@ -354,23 +342,22 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="currency-info">
-                                            <span class="currency-name" id="toCurrencyName">US Dollar</span>
-                                            <span class="currency-rate" id="toCurrencyRate">1 USD = $1.00</span>
+                                        <div class="currency-info mt-2">
+                                            <span class="currency-name fw-semibold" id="toCurrencyName">US Dollar</span>
+                                            <span class="currency-rate text-muted ms-2" id="toCurrencyRate">1 USD = $1.00</span>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <!-- Enhanced Exchange Rate Display -->
-                                <div class="col-12">
-                                    <div class="exchange-rate-display">
+                                <!-- Exchange Rate Display -->
+                                <div class="col-12 mt-3">
+                                    <div class="exchange-rate-display d-flex flex-wrap justify-content-between align-items-center bg-gradient rounded-2 px-3 py-2 animate__animated animate__fadeIn" style="background:linear-gradient(90deg,#7b2ff2,#f357a8);color:#fff;">
                                         <div class="rate-info">
-                                            <span class="rate-label">
+                                            <span class="rate-label fw-semibold">
                                                 <i class="fas fa-chart-line me-2"></i>Exchange Rate:
                                             </span>
                                             <span id="exchangeRate" class="rate-value">1 USD = 1.00 USD</span>
                                         </div>
-                                        <div class="rate-details">
+                                        <div class="rate-details d-flex gap-4">
                                             <div class="rate-change">
                                                 <span class="change-label">24h Change:</span>
                                                 <span id="rateChange" class="change-value positive">+2.5%</span>
@@ -382,14 +369,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <!-- Enhanced Action Buttons -->
-                                <div class="col-12 text-center">
-                                    <div class="calculator-actions">
-                                        <button type="button" id="convertBtn" class="cmn--btn bg-7 h--60px px-5 me-3">
+                                <!-- Action Buttons -->
+                                <div class="col-12 text-center mt-4">
+                                    <div class="calculator-actions d-flex justify-content-center gap-3">
+                                        <button type="button" id="convertBtn" class="cmn--btn bg-7 h--60px px-5 animate__animated animate__pulse animate__infinite">
                                             <i class="fas fa-calculator me-2"></i>Convert Now
                                         </button>
-                                        <button type="button" id="resetBtn" class="cmn--btn btn--transparent h--60px px-4 me-3">
+                                        <button type="button" id="resetBtn" class="cmn--btn btn--transparent h--60px px-4">
                                             <i class="fas fa-redo me-2"></i>Reset
                                         </button>
                                         <button type="button" id="historyBtn" class="cmn--btn btn--outline h--60px px-4">
@@ -399,52 +385,51 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <!-- Popular Conversions -->
                         <div class="popular-conversions mt-5">
-                            <h5 class="text-white mb-4 text-center">Popular Conversions</h5>
-                            <div class="row g-3">
+                            <h5 class="text-white mb-4 text-center animate__animated animate__fadeInUp">Popular Conversions</h5>
+                            <div class="row g-3 justify-content-center">
                                 <div class="col-lg-3 col-md-6">
-                                    <div class="quick-conversion" data-from="BTC" data-to="USD">
-                                        <div class="conversion-icon">
+                                    <div class="quick-conversion bg-gradient rounded-3 p-3 text-center shadow animate__animated animate__fadeInUp" data-from="BTC" data-to="USD" style="background:linear-gradient(90deg,#7b2ff2,#f357a8);color:#fff;">
+                                        <div class="conversion-icon fs-2 mb-2">
                                             <i class="fab fa-bitcoin"></i>
                                         </div>
                                         <div class="conversion-info">
-                                            <span class="conversion-pair">BTC → USD</span>
-                                            <span class="conversion-rate" id="btc-usd">$0.00</span>
+                                            <span class="conversion-pair fw-semibold">BTC → USD</span>
+                                            <span class="conversion-rate d-block mt-1" id="btc-usd">$0.00</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6">
-                                    <div class="quick-conversion" data-from="ETH" data-to="USD">
-                                        <div class="conversion-icon">
+                                    <div class="quick-conversion bg-gradient rounded-3 p-3 text-center shadow animate__animated animate__fadeInUp" data-from="ETH" data-to="USD" style="background:linear-gradient(90deg,#f357a8,#7b2ff2);color:#fff;">
+                                        <div class="conversion-icon fs-2 mb-2">
                                             <i class="fab fa-ethereum"></i>
                                         </div>
                                         <div class="conversion-info">
-                                            <span class="conversion-pair">ETH → USD</span>
-                                            <span class="conversion-rate" id="eth-usd">$0.00</span>
+                                            <span class="conversion-pair fw-semibold">ETH → USD</span>
+                                            <span class="conversion-rate d-block mt-1" id="eth-usd">$0.00</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6">
-                                    <div class="quick-conversion" data-from="USD" data-to="EUR">
-                                        <div class="conversion-icon">
-                                            <i class="fas fa-dollar-sign"></i>
+                                    <div class="quick-conversion bg-gradient rounded-3 p-3 text-center shadow animate__animated animate__fadeInUp" data-from="USD" data-to="EUR" style="background:linear-gradient(90deg,#7b2ff2,#f357a8);color:#fff;">
+                                        <div class="conversion-icon fs-2 mb-2">
+                                            <i class="fas fa-euro-sign"></i>
                                         </div>
                                         <div class="conversion-info">
-                                            <span class="conversion-pair">USD → EUR</span>
-                                            <span class="conversion-rate" id="usd-eur">€0.00</span>
+                                            <span class="conversion-pair fw-semibold">USD → EUR</span>
+                                            <span class="conversion-rate d-block mt-1" id="usd-eur">€0.00</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6">
-                                    <div class="quick-conversion" data-from="USD" data-to="GBP">
-                                        <div class="conversion-icon">
+                                    <div class="quick-conversion bg-gradient rounded-3 p-3 text-center shadow animate__animated animate__fadeInUp" data-from="USD" data-to="GBP" style="background:linear-gradient(90deg,#f357a8,#7b2ff2);color:#fff;">
+                                        <div class="conversion-icon fs-2 mb-2">
                                             <i class="fas fa-pound-sign"></i>
                                         </div>
                                         <div class="conversion-info">
-                                            <span class="conversion-pair">USD → GBP</span>
-                                            <span class="conversion-rate" id="usd-gbp">£0.00</span>
+                                            <span class="conversion-pair fw-semibold">USD → GBP</span>
+                                            <span class="conversion-rate d-block mt-1" id="usd-gbp">£0.00</span>
                                         </div>
                                     </div>
                                 </div>
@@ -454,6 +439,31 @@
                 </div>
             </div>
         </div>
+        <style>
+            .calculator-bg-shapes .calc-circle-1, .calculator-bg-shapes .calc-circle-2 {
+                position: absolute; border-radius: 50%; opacity: 0.15; z-index: 0;
+            }
+            .calculator-bg-shapes .calc-circle-1 { width: 180px; height: 180px; top: -60px; left: -60px; background: #7b2ff2; }
+            .calculator-bg-shapes .calc-circle-2 { width: 120px; height: 120px; bottom: -40px; right: -40px; background: #f357a8; }
+            .calculator-bg-shapes .calc-floating-shape { position: absolute; width: 60px; height: 60px; border-radius: 50%; opacity: 0.18; }
+            .calculator-bg-shapes .shape-1 { top: 40%; left: 0; background: #7b2ff2; }
+            .calculator-bg-shapes .shape-2 { bottom: 30%; right: 0; background: #f357a8; }
+            .btn-gradient { background: linear-gradient(90deg,#7b2ff2,#f357a8); color: #fff; border: none; }
+            .text-gradient { background: linear-gradient(90deg,#7b2ff2,#f357a8); -webkit-background-clip: text; color: transparent; }
+            .calculator-card { transition: box-shadow .3s; }
+            .calculator-card:hover { box-shadow:0 16px 48px rgba(123,47,242,0.18); }
+            .currency-select { min-width: 140px; }
+            .swap-btn:active { transform: rotate(180deg); transition: transform .4s; }
+            .exchange-rate-display { font-size: 1.1rem; }
+            .popular-conversions .quick-conversion { cursor:pointer; transition:transform .2s,box-shadow .2s; }
+            .popular-conversions .quick-conversion:hover { transform:scale(1.06); box-shadow:0 8px 32px rgba(123,47,242,0.18); }
+            @media (max-width: 991px) {
+                .calculation-wrapper-inner { padding: 24px 8px; }
+                .calculator-card { padding: 16px 8px; }
+            }
+        </style>
+        <!-- Animate.css CDN for animations -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </section>
     <!-- Enhanced Currency Calculator Section -->
 
@@ -637,12 +647,12 @@
                 <div class="row gy-5">
                     <div class="col-lg-3 col-sm-6">
                         <div class="text-start footer-about">
-                            <div class="footer-logo mb-25 ms-0">
+                            <div>
                                 <a href="#0">
-                                    <img src="./assets/images/logo/logo.png" alt="footer">
+                                    <img src="./assets/images/logo/logo-white.png" alt="footer" style="max-width: 205px; height: auto; margin-top: -9%;">
                                 </a>
                             </div>
-                            <ul class="footer__links">
+                            <ul class="footer__links" style="margin-top: 34px;">
                                 <li>
                                     <a href="Mailto:info@yourdomain.com">info@yourdomain.com</a>
                                 </li>
@@ -652,8 +662,8 @@
                                     </h5>
                                 </li>
                             </ul>
-                            <ul class="social-icons-2 mt-3">
-                                <li>
+                            <ul class="social-icons-2 mt-3"  >
+                                <li >
                                     <a href="#0">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
@@ -745,13 +755,13 @@
         <div class="footer-bottom text-white">
             <div class="container">
                 <div class="row g-2">
-                    <div class="col-lg-6">
-                        <div class="copyright text-center text-lg-start">
+                    <div class="col-lg-6" >
+                        <div class="copyright text-center text-lg-start" ">
                          &copy;2025 <a href="javascript:void(0)" class="text-white fw--semibold text-decoration-none">BLOCK EFFECT</a> All rights reserved.
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <ul class="quick-links justify-content-center justify-content-lg-end">
+                        <!-- <ul class="quick-links justify-content-center justify-content-lg-end">
                            
                             <li>
                                 [Terms & Conditions]
@@ -760,7 +770,7 @@
                                 [Privacy Policy] 
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
