@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +21,7 @@
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 </head>
 
-<body class="bg--dark-15">
+<body>
 
 
     <!-- ==========Preloader Starts Here========== -->
@@ -37,97 +36,47 @@
 
     
     <!-- Header Section -->
-    <header class="header-section">
+    <header class="header-section" style="width:100vw; min-width:100%; background-size:cover; background-position:center; background-repeat:no-repeat;">
         <div class="container">
             <div class="header-area">
                 <div class="logo me-auto">
-                    <a href="index.html">
-                        <img src="./assets/images/logo/logo.png" alt="footer"></a>
+                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
                 </div>
                 <ul class="menu">
                     <li>
-                        <a href="#">home</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="index.html">Home 1</a>
-                            </li>
-                            <li>
-                                <a href="index-2.html">Home 2</a>
-                            </li>
-                            <li>
-                                <a href="index-3.html">Home 3</a>
-                            </li>
-                            <li>
-                                <a href="index-4.html">Home 4</a>
-                            </li>
-                            <li>
-                                <a href="index-5.html">Home 5</a>
-                            </li>
-                            <li>
-                                <a href="index-6.html">Home 6</a>
-                            </li>
-                            <li>
-                                <a href="index-7.html">Home 7</a>
-                            </li>
-                            <li>
-                                <a href="index-8.html">Home 8</a>
-                            </li>
-                            <li>
-                                <a href="index-9.html">Home 9</a>
-                            </li>
-                            <li>
-                                <a href="index-10.html">Home 10</a>
-                            </li>
-                        </ul>
+                        <a href="index-8.html">Home</a>
                     </li>
                     <li>
-                        <a href="#tokens">TOKENS</a>
+                        <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="#road">ROADMAP</a>
+                        <a href="Services.html">Services</a>
                     </li>
                     <li>
-                        <a href="#team">TEAM</a>
+                        <a href="Projects.html">Projects</a>
                     </li>
                     <li>
-                        <a href="#faq">FAQ</a>
-                    </li>
-                    <li>
-                        <a href="#how">Pages</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="about.html">About Us</a>
-                            </li>
-                            <li>
-                                <a href="blog.html">Blog</a>
-                            </li>
-                            <li>
-                                <a href="blog-single.html">Blog Single</a>
-                            </li>
-                            <li>
-                                <a href="error-404.html">404 Error</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <div class="header-buttons d-flex flex-wrap justify-content-center d-md-none">
-                            <a href="#0" class="cmn--btn bg-9 btn-pill m-3">Login</a>
-                        </div>
+                        <a href="contact.html">Contact Us</a>
                     </li>
                 </ul>
-                <select class="select-bar">
-                    <option value="en">En</option>
-                    <option value="bn">Bn</option>
-                    <option value="pk">Pk</option>
-                    <option value="in">In</option>
-                    <option value="us">Us</option>
-                </select>
                 <div class="header-buttons d-none d-md-flex">
-                    <a href="#0" class="cmn--btn bg-10 btn-pill">Login</a>
+                    <a href="contact.html#contact#header" class="cmn--btn btn--transparent btn-pill header-btn-white-hover">Get In Touch</a>
                 </div>
+                <style>
+                    .header-btn-white-hover:hover,
+                    .header-btn-white-hover:focus {
+                        background: #fff !important;
+                        color: #222 !important;
+                        border-color: #fff !important;
+                        transition: all 0.2s;
+                    }
+                    /* Purple color for sticky header */
+                    .header-section.sticky {
+                        background: linear-gradient(90deg, #7b2ff2 0%, #f357a8 100%) !important;
+                        /* You can adjust the purple gradient as needed */
+                        transition: background 0.3s;
+                    }
+                </style>
                 <div class="header-bar d-lg-none ms-3">
                     <span></span>
                     <span></span>
@@ -135,124 +84,66 @@
                 </div>
             </div>
         </div>
+        <script>
+            // Sticky header color change on scroll
+            window.addEventListener('scroll', function() {
+                var header = document.querySelector('.header-section');
+                if (window.scrollY > 10) {
+                    header.classList.add('sticky');
+                } else {
+                    header.classList.remove('sticky');
+                }
+            });
+        </script>
     </header>
     <!-- Header Section -->
 
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section-4 overflow-hidden bg_img bg_contain" data-img="./assets/images/shapes-bg/hero-shape-4.png">
+    <section class="hero-section-8 gradient-1" style="min-height: 100vh; display: flex; align-items: center; padding: 60px 0 0 0; background-size: cover; background-position: center;">
+        <div class="bottom-shape d-none d-lg-block">
+            <img src="./assets/images/shapes-bg/hero-shape-4.1.png" alt="hero" style="opacity: calc(100);">
+        </div>
         <div class="container">
-            <div class="hero-wrapper">
-                <div class="hero-content cl-white mw--585 wow fadeInUp">
-                    <h1 class="hero-title">Buy & sell crypto easier than for ever</h1>
-                    <p class="hero-txt">
-                        Grursus mal suada faci lisis Lorem ipsum dolarorit mor ametion the consectetur nec odio aea the dumm text.
-                    </p>
-                    <ul class="countdown d-flex flex-wrap cl-white">
-                        <li>
-                            <h2 class="title"><span class="days">00</span></h2>
-                            <p class="days_text">days</p>
-                        </li>
-                        <li>
-                            <h2 class="title"><span class="hours">00</span></h2>
-                            <p class="hours_text">hours</p>
-                        </li>
-                        <li>
-                            <h2 class="title"><span class="minutes">00</span></h2>
-                            <p class="minu_text">minutes</p>
-                        </li>
-                        <li>
-                            <h2 class="title"><span class="seconds">00</span></h2>
-                            <p class="seco_text">seconds</p>
-                        </li>
-                    </ul>
-                    <div class="hero-button-group">
-                        <a href="#0" class="cmn--btn btn-pill btn--transparent">Private Sell</a>
-                        <a href="#0" class="cmn--btn btn--white btn-pill btn--10">Token Destribution</a>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <div class="hero-wrapper wow fadeInUp">
+                        <div class="hero-content hero-content-3 cl-white">
+                            <h1 class="hero-title">Unleashing Blockchain Potential one Block at a Time</h1>
+                            <p class="hero-txt">
+                                Empowering Web3 innovation through strategic consulting, crypto insights, and blockchain transformation.
+                            </p>
+                            <div class="hero-button-group justify-content-center" style="gap: 16px; display: flex; flex-wrap: wrap;">
+                                <a href="#0" class="cmn--btn btn--transparent btn-pill header-btn-white-hover" style="color: #fff; border-color: #fff;">Explore Services</a>
+                                <a href="#0" class="cmn--btn btn--transparent btn-pill header-btn-white-hover" style="color: #fff; border-color: #fff;">Get In Touch</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-thumb d-none d-lg-block wow fadeInLeft">
-                    <img src="./assets/images/hero/hero5.png" alt="hero">
                 </div>
             </div>
         </div>
     </section>
     <!-- Hero Section -->
 
-
-    <!-- Rank Slider Section -->
-    <div class="rank-slider-section pb-60">
-        <div class="container">
-            <div class="rank-slider style-two owl-theme owl-carousel wow fadeInUp">
-                <div class="rank-item">
-                    <h6 class="title cl-10">4.7/5</h6>
-                    <span class="info">ICO Bench</span>
-                </div>
-                <div class="rank-item">
-                    <h6 class="title cl-10">9.5/5</h6>
-                    <span class="info">ICO Marks</span>
-                </div>
-                <div class="rank-item">
-                    <h6 class="title cl-10">4.7/5</h6>
-                    <span class="info">ICO Ranker</span>
-                </div>
-                <div class="rank-item">
-                    <h6 class="title cl-10">4.7/5</h6>
-                    <span class="info">ICO Bazaar</span>
-                </div>
-                <div class="rank-item">
-                    <h6 class="title cl-10">4.7/5</h6>
-                    <span class="info">ICO Track</span>
-                </div>
-                <div class="rank-item">
-                    <h6 class="title cl-10">4.7/5</h6>
-                    <span class="info">ICO Holder</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Rank Slider Section -->
-
-
     <!-- About Section -->
-    <section class="about-section pt-60 pb-60">
+    <section class="about-section pt-120 pb-120 pb-lg-0">
         <div class="container">
-            <div class="cryptiam__ico">
-                <div class="row gy-5 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about--content wow fadeInUp">
-                            <div class="section-header mb-4">
-                                <h5 class="section-name cl-10">About The Kaniz</h5>
-                                <h2 class="section-title text-white fw-normal">Kaniz Template is The
-                                    Best for your ICO</h2>
-                            </div>
-                            <p class="mb-4">
-                                There are many variations of passages of Lorem Ipsum available but is  the majority have suffered alteration in that  some  injected humour randomised slightly believable.
-                            </p>
-                            <ul class="about--list checked-style">
-                                <li>
-                                    Mouthwatering leading how real.
-                                </li>
-                                <li>
-                                    Bitcoin Ethereum blockchains are slow and expensive.
-                                </li>
-                                <li>
-                                    Present your money using fully featured digital currency. 
-                                </li>
-                                <li>
-                                    Using fully featured digital currency. 
-                                </li>
-                            </ul>
-                        </div>
+            <div class="row">
+                <div class="col-lg-6 d-none d-lg-block wow fadeInRight">
+                    <div class="about--thumb me-4">
+                        <img src="./assets/images/about/about13.png" alt="about">
                     </div>
-                    <div class="col-lg-6">
-                        <div class="about--thumb video-style wow fadeInLeft">
-                            <img src="./assets/images/about/about10.png" alt="about">
-                            <div class="video--wrapper">
-                                <a href="https://www.youtube.com/watch?v=vQWlgd7hV4A" class="video--btn video-pop">
-                                    <i class="las la-play"></i>
-                                </a>
-                            </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp">
+                    <div class="about--content">
+                        <div class="section-header mb-4">
+                            <h2 class="section-title">Investment To The Future
+                                Business Technology</h2>
+                                <br>
+                            <p class="section-text quote__txt">
+                               BLOCK EFFECT is a next-generation Web3 agency committed to navigating the decentralized future. We collaborate with customers worldwide to develop powerful blockchain strategies, introduce innovative crypto products, and accelerate Web3 adoption.
+                               We believe in building lasting partnerships grounded in trust, transparency, and shared vision. Our mission goes beyond technology we're here to empower communities, spark innovation, and shape a more open digital world together.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -263,767 +154,575 @@
 
 
     <!-- Benifit Token Section -->
-    <section class="benifit-token-section pt-60 pb-60 bg_img bg_contain" id="token" data-img="./assets/images/shapes-bg/bg-1.png">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-header section-header-center wow fadeInUp">
-                        <div class="titles-area">
-                            <h6 class="section-name text-white">Feature</h6>
-                            <h2 class="section-title text-white fw-normal">Benifit of Tokens</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center g-4 different-colors">
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card bg">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/13.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title">Early Bonus</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card bg">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/14.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title">Low Cost</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card bg">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/15.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title">Univarsal Access</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card bg">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/16.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title">Money Transfer</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card bg">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/17.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title">Secure Transfer</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card bg">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/18.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title">Several Profit</h4>
-                    </div>
-                </div>
-            </div>
+    <section class="benifit-token-section benifit-crypto pt-120 pb-120 position-relative gradient-1 overflow-hidden" id="token">
+        <div class="top-shape d-none d-lg-block">
+            <img src="./assets/images/benifit/bg-top-shape-1.png" alt="benifit">
         </div>
-    </section>
-    <!-- Benifit Token Section -->
-    
-    
-    <!-- Road Map Section -->
-    <section class="road-map-section pt-60 pb-60 bg_img bg_contain" id="road" data-img="./assets/images/shapes-bg/road-map-shape3.png">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-header section-header-center wow fadeInUp">
-                        <div class="titles-area">
-                            <h6 class="section-name text-white">Our Way</h6>
-                            <h2 class="section-title text-white fw-normal">Road Map</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="road__map-area">
-                <div class="road__map-item wow fadeInUp">
-                    <h5 class="subtitle cl-10">Dec, 2024</h5>
-                    <div class="road__map-content">
-                        <h5 class="title">Team Formation</h5>
-                        <p>
-                            Grursus mal suada faci lisis Lorem ipsum dolarorit more a ametion consectetur elit. Vesti at bulum nec odio aea ipsumm dolocons fadolorit.
-                        </p>
-                    </div>
-                </div>
-                <div class="road__map-item wow fadeInUp">
-                    <h5 class="subtitle cl-10">Dec, 2024</h5>
-                    <div class="road__map-content">
-                        <h5 class="title">Project Concept</h5>
-                        <p>
-                            Grursus mal suada faci lisis Lorem ipsum dolarorit more a ametion consectetur elit. Vesti at bulum nec odio aea ipsumm dolocons fadolorit.
-                        </p>
-                    </div>
-                </div>
-                <div class="road__map-item wow fadeInUp">
-                    <h5 class="subtitle cl-10">Dec, 2024</h5>
-                    <div class="road__map-content">
-                        <h5 class="title">Ico Begins</h5>
-                        <p>
-                            Grursus mal suada faci lisis Lorem ipsum dolarorit more a ametion consectetur elit. Vesti at bulum nec odio aea ipsumm dolocons fadolorit.
-                        </p>
-                    </div>
-                </div>
-                <div class="road__map-item wow fadeInUp">
-                    <h5 class="subtitle cl-10">Dec, 2024</h5>
-                    <div class="road__map-content">
-                        <h5 class="title">Public Crowdsale</h5>
-                        <p>
-                            Grursus mal suada faci lisis Lorem ipsum dolarorit more a ametion consectetur elit. Vesti at bulum nec odio aea ipsumm dolocons fadolorit.
-                        </p>
-                    </div>
-                </div>
-                <div class="road__map-item wow fadeInUp">
-                    <h5 class="subtitle cl-10">Dec, 2024</h5>
-                    <div class="road__map-content">
-                        <h5 class="title">Testing Public Beta Relese</h5>
-                        <p>
-                            Grursus mal suada faci lisis Lorem ipsum dolarorit more a ametion consectetur elit. Vesti at bulum nec odio aea ipsumm dolocons fadolorit.
-                        </p>
-                    </div>
-                </div>
-                <div class="road__map-item wow fadeInUp">
-                    <h5 class="subtitle cl-10">Dec, 2024</h5>
-                    <div class="road__map-content">
-                        <h5 class="title">Official Release</h5>
-                        <p>
-                            Grursus mal suada faci lisis Lorem ipsum dolarorit more a ametion consectetur elit. Vesti at bulum nec odio aea ipsumm dolocons fadolorit.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="bottom-shape d-none d-lg-block">
+            <img src="./assets/images/shapes-bg/hero-shape-4.1.png" alt="benifit">
         </div>
-    </section>
-    <!-- Road Map Section -->
-
-
-    <!-- Sponsor Section -->
-    <section class="sponsor-section pt-60 pb-60">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-header section-header-center wow fadeInUp">
-                        <div class="titles-area">
-                            <h6 class="section-name text-white">Partners</h6>
-                            <h2 class="section-title text-white fw-normal">Supported By</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sponsor-area sponsor-area-3 wow fadeInUp">
-                <div class="w-100 sponsor-area-inner-3">
-                    <div class="sponsor-thumb">
-                        <a href="javascript:void(0)">
-                            <img src="./assets/images/sponsor/01.png" alt="sponsor">
-                        </a>
-                    </div>
-                    <div class="sponsor-thumb">
-                        <a href="javascript:void(0)">
-                            <img src="./assets/images/sponsor/02.png" alt="sponsor">
-                        </a>
-                    </div>
-                    <div class="sponsor-thumb">
-                        <a href="javascript:void(0)">
-                            <img src="./assets/images/sponsor/03.png" alt="sponsor">
-                        </a>
-                    </div>
-                    <div class="sponsor-thumb">
-                        <a href="javascript:void(0)">
-                            <img src="./assets/images/sponsor/04.png" alt="sponsor">
-                        </a>
-                    </div>
-                    <div class="sponsor-thumb">
-                        <a href="javascript:void(0)">
-                            <img src="./assets/images/sponsor/05.png" alt="sponsor">
-                        </a>
-                    </div>
-                    <div class="sponsor-thumb">
-                        <a href="javascript:void(0)">
-                            <img src="./assets/images/sponsor/06.png" alt="sponsor">
-                        </a>
-                    </div>
-                    <div class="sponsor-thumb">
-                        <a href="javascript:void(0)">
-                            <img src="./assets/images/sponsor/07.png" alt="sponsor">
-                        </a>
-                    </div>
-                    <div class="sponsor-thumb">
-                        <a href="javascript:void(0)">
-                            <img src="./assets/images/sponsor/08.png" alt="sponsor">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Sponsor Section -->
-
-    <!-- Problem & Solution -->
-    <div class="bg_img bg_contain" data-img="./assets/images/shapes-bg/solution.png">
-        <!-- Problem Facing Section -->
-        <section class="problem-facing pt-60 pb-120">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section-header section-header-center wow fadeInUp">
-                            <div class="titles-area">
-                                <h6 class="section-name text-white">Our Problem</h6>
-                                <h2 class="section-title text-white fw-normal">Problem Facing</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center g-4">
-                    <div class="col-md-6 wow fadeInUp">
-                        <div class="problem__item">
-                            <h5 class="title">Automation Development</h5>
-                            <p>
-                                There are many variations of passages of Lorem Ipsum dum  available but the majority have suffered alteration in that  the passage of Lorem Ipsum you need to be sure there isn't more anything that many embarrassing.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow fadeInUp">
-                        <div class="problem__item">
-                            <h5 class="title">High transfer fees</h5>
-                            <p>
-                                There are many variations of passages of Lorem Ipsum dum  available but the majority have suffered alteration in that  the passage of Lorem Ipsum you need to be sure there isn't more anything that many embarrassing.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow fadeInUp">
-                        <div class="problem__item">
-                            <h5 class="title">Scaling and Absolete Tool</h5>
-                            <p>
-                                There are many variations of passages of Lorem Ipsum dum  available but the majority have suffered alteration in that  the passage of Lorem Ipsum you need to be sure there isn't more anything that many embarrassing.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow fadeInUp">
-                        <div class="problem__item">
-                            <h5 class="title">Secure Networks & Flexibility</h5>
-                            <p>
-                                There are many variations of passages of Lorem Ipsum dum  available but the majority have suffered alteration in that  the passage of Lorem Ipsum you need to be sure there isn't more anything that many embarrassing.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Problem Facing Section -->
-
-        <!-- Solutions Section -->
-        <section class="solution-section">
-            <div class="container">
-                <div class="solution-wrapper">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-6">
-                            <div class="section-header section-header-center wow fadeInUp">
-                                <div class="titles-area">
-                                    <h6 class="section-name text-white">Our Problem</h6>
-                                    <h2 class="section-title text-white fw-normal">Problem Facing</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gx-4 gy-5 justify-content-center">
-                        <div class="col-md-6 wow fadeInUp">
-                            <div class="solution-item">
-                                <div class="icon">
-                                    <img src="./assets/images/solutions/1.png" alt="solutions">
-                                </div>
-                                <div class="content">
-                                    <h5 class="title">Global Single-Platform:</h5>
-                                    <p>
-                                        There are many variations  available but the majority have suffered alteration in that  the passage Ipsum you need. 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow fadeInUp">
-                            <div class="solution-item">
-                                <div class="icon">
-                                    <img src="./assets/images/solutions/2.png" alt="solutions">
-                                </div>
-                                <div class="content">
-                                    <h5 class="title">Be Safe and Secure:</h5>
-                                    <p>
-                                        There are many variations  available but the majority have suffered alteration in that  the passage Ipsum you need. 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow fadeInUp">
-                            <div class="solution-item">
-                                <div class="icon">
-                                    <img src="./assets/images/solutions/3.png" alt="solutions">
-                                </div>
-                                <div class="content">
-                                    <h5 class="title">Decentralize Payment Systems</h5>
-                                    <p>
-                                        There are many variations  available but the majority have suffered alteration in that  the passage Ipsum you need. 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow fadeInUp">
-                            <div class="solution-item">
-                                <div class="icon">
-                                    <img src="./assets/images/solutions/4.png" alt="solutions">
-                                </div>
-                                <div class="content">
-                                    <h5 class="title">Blockchain Based Marketplace</h5>
-                                    <p>
-                                        There are many variations  available but the majority have suffered alteration in that  the passage Ipsum you need. 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Solutions Section -->
-    </div>
-    <!-- Problem & Solution -->
-
-
-    <!-- Structure Section -->
-    <section class="structure-section pt-60 pb-60">
-        <div class="container">
-            <div class="row pb-5 gy-5">
-                <div class="col-lg-6 col-xl-7 wow fadeInRight">
-                    <img src="./assets/images/about/about9.png" class="mw-100" alt="about">
-                </div>
-                <div class="col-lg-6 col-xl-5 wow fadeInUp">
-                    <div class="section-header-4">
-                        <h6 class="subtitle text-white fw-normal">About token</h6>
-                        <h2 class="title text-white fw-normal">Pre-Sale & Values</h2>
-                    </div>
-                    <ul class="about-token-wrapper">
-                        <li>
-                            <div class="title">Token Name :</div>
-                            <div class="info">Kaniz Token</div>
-                        </li>
-                        <li>
-                            <div class="title">Ticker Symbol:</div>
-                            <div class="info">Kaniz</div>
-                        </li>
-                        <li>
-                            <div class="title">Currency Symbol Image : </div>
-                            <div class="info">Currency Symbol Image</div>
-                        </li>
-                        <li>
-                            <div class="title">Starting Price Pre-ICO:  </div>
-                            <div class="info">Kaniz for USD 0.08</div>
-                        </li>
-                        <li>
-                            <div class="title">Maximum Eroiy</div>
-                            <div class="info">Kaniz  for USD 0.12</div>
-                        </li>
-                        <li>
-                            <div class="title">produced: </div>
-                            <div class="info">Kaniz</div>
-                        </li>
-                        <li>
-                            <div class="title">Maximum Eroiy for Sale: </div>
-                            <div class="info">2 billion (technical limit)</div>
-                        </li>
-                        <li>
-                            <div class="title">Fundraising Goal:</div>
-                            <div class="info">USD 48 million</div>
-                        </li>
-                        <li>
-                            <div class="title">Minimum Purchase: </div>
-                            <div class="info">100 Cryptoland</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-6 wow fadeInUp">
-                    <div id="piechart_3d" class="chart--size-2 bg--dark-16 border-0"></div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp">
-                    <div id="piechart" class="chart--size-2 bg--dark-16 border-0"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Structure Section -->
-
-
-    <!-- Team Section -->
-    <section class="team-section pb-120 pt-60" id="team">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-header section-header-center wow fadeInUp">
-                        <div class="titles-area">
-                            <h6 class="section-name text-white">Our Team</h6>
-                            <h2 class="section-title text-white fw-normal">Team Member</h2>
-                        </div>
-                    </div>
-                </div>
+        <div class="container position-relative" style="margin-top: -30%;">
+            <div class="section-header section-header-center wow fadeInUp">
+                <h2 class="section-title fw--medium text-white">Who We Are?</h2>
             </div>
             <div class="row justify-content-center g-4">
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp">
-                    <div class="team-box-9 bg--dark-16">
-                        <div class="team-thumb">
-                            <img src="./assets/images/team/team21.png" alt="team">
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card text-center">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/1.png" alt="benifit">
                         </div>
-                        <div class="team-content">
-                            <h6 class="title"><a href="#0">Henry Nichols</a></h6>
-                            <span class="info cl-9">Founder CEO</span>
-                            <ul class="social">
-                                <li>
-                                    <a href="#0"><i class="lab la-facebook-f"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-pinterest-p"></i></a>
-                                </li>
-                            </ul>
-                            <p>
-                                There are many variations of is passages of Lorem Ipsum available but the majority by slightly believable.
-                            </p>
-                        </div>
+                        <h4 class="benifit__card-title">Early Bonus</h4>
+                        <p>
+                            There are many variations passages of Lorem Ipsum available  suffered is that more alteration.
+                        </p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp">
-                    <div class="team-box-9 bg--dark-16">
-                        <div class="team-thumb">
-                            <img src="./assets/images/team/team22.png" alt="team">
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card text-center">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/2.png" alt="benifit">
                         </div>
-                        <div class="team-content">
-                            <h6 class="title"><a href="#0">Henry Nichols</a></h6>
-                            <span class="info cl-9">Founder CEO</span>
-                            <ul class="social">
-                                <li>
-                                    <a href="#0"><i class="lab la-facebook-f"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-pinterest-p"></i></a>
-                                </li>
-                            </ul>
-                            <p>
-                                There are many variations of is passages of Lorem Ipsum available but the majority by slightly believable.
-                            </p>
-                        </div>
+                        <h4 class="benifit__card-title">Low Cost</h4>
+                        <p>
+                            There are many variations passages of Lorem Ipsum available  suffered is that more alteration.
+                        </p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp">
-                    <div class="team-box-9 bg--dark-16">
-                        <div class="team-thumb">
-                            <img src="./assets/images/team/team23.png" alt="team">
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card text-center">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/3.png" alt="benifit">
                         </div>
-                        <div class="team-content">
-                            <h6 class="title"><a href="#0">Henry Nichols</a></h6>
-                            <span class="info cl-9">Founder CEO</span>
-                            <ul class="social">
-                                <li>
-                                    <a href="#0"><i class="lab la-facebook-f"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-pinterest-p"></i></a>
-                                </li>
-                            </ul>
-                            <p>
-                                There are many variations of is passages of Lorem Ipsum available but the majority by slightly believable.
-                            </p>
-                        </div>
+                        <h4 class="benifit__card-title">Univarsal Access</h4>
+                        <p>
+                            There are many variations passages of Lorem Ipsum available  suffered is that more alteration.
+                        </p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp">
-                    <div class="team-box-9 bg--dark-16">
-                        <div class="team-thumb">
-                            <img src="./assets/images/team/team26.png" alt="team">
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card text-center">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/4.png" alt="benifit">
                         </div>
-                        <div class="team-content">
-                            <h6 class="title"><a href="#0">Henry Nichols</a></h6>
-                            <span class="info cl-9">Founder CEO</span>
-                            <ul class="social">
-                                <li>
-                                    <a href="#0"><i class="lab la-facebook-f"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-pinterest-p"></i></a>
-                                </li>
-                            </ul>
-                            <p>
-                                There are many variations of is passages of Lorem Ipsum available but the majority by slightly believable.
-                            </p>
-                        </div>
+                        <h4 class="benifit__card-title">Money Transfer</h4>
+                        <p>
+                            There are many variations passages of Lorem Ipsum available  suffered is that more alteration.
+                        </p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp">
-                    <div class="team-box-9 bg--dark-16">
-                        <div class="team-thumb">
-                            <img src="./assets/images/team/team25.png" alt="team">
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card text-center">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/5.png" alt="benifit">
                         </div>
-                        <div class="team-content">
-                            <h6 class="title"><a href="#0">Henry Nichols</a></h6>
-                            <span class="info cl-9">Founder CEO</span>
-                            <ul class="social">
-                                <li>
-                                    <a href="#0"><i class="lab la-facebook-f"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-pinterest-p"></i></a>
-                                </li>
-                            </ul>
-                            <p>
-                                There are many variations of is passages of Lorem Ipsum available but the majority by slightly believable.
-                            </p>
-                        </div>
+                        <h4 class="benifit__card-title">Secure Transfer</h4>
+                        <p>
+                            There are many variations passages of Lorem Ipsum available  suffered is that more alteration.
+                        </p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp">
-                    <div class="team-box-9 bg--dark-16">
-                        <div class="team-thumb">
-                            <img src="./assets/images/team/team26.png" alt="team">
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card text-center">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/6.png" alt="benifit">
                         </div>
-                        <div class="team-content">
-                            <h6 class="title"><a href="#0">Henry Nichols</a></h6>
-                            <span class="info cl-9">Founder CEO</span>
-                            <ul class="social">
-                                <li>
-                                    <a href="#0"><i class="lab la-facebook-f"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#0"><i class="lab la-pinterest-p"></i></a>
-                                </li>
-                            </ul>
-                            <p>
-                                There are many variations of is passages of Lorem Ipsum available but the majority by slightly believable.
-                            </p>
-                        </div>
+                        <h4 class="benifit__card-title">Several Profit</h4>
+                        <p>
+                            There are many variations passages of Lorem Ipsum available  suffered is that more alteration.
+                        </p>
                     </div>
                 </div>
             </div>
+        
+            <style>
+                /* Reduce extra background space below sponsor section */
+                .benifit-token-section {
+                    padding-bottom: 40px !important;
+                }
+                @media (max-width: 991px) {
+                    .benifit-token-section {
+                        padding-bottom: 20px !important;
+                    }
+                }
+            </style>
         </div>
     </section>
-    <!-- Team Section -->
-
-
-    <!-- Faqs Section -->
-    <section class="faqs-section pt-120 pb-120 overflow-hidden bg--dark-16" id="faq">
+    <!-- Benifit Token Section -->
+    <!-- Why Choose Us Section -->
+    <div class="why-choose-us-section pt-120 pb-120 gradient-1">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-header section-header-center wow fadeInUp">
-                        <div class="titles-area">
-                            <h6 class="section-name text-white">Faq</h6>
-                            <h2 class="section-title text-white fw-normal">Have any questions?</h2>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header section-header-center wow fadeInUp mb-5">
+                <h2 class="section-title text-white">Why Choose Us?</h2>
+                <p class="section-text text-white">
+                    Discover the advantages of partnering with BLOCK EFFECT for your Web3 and blockchain journey.
+                </p>
             </div>
-            <div class="row gx-xxl-5 g-4">
-                <div class="col-lg-4">
-                    <div class="faq-sidebar wow fadeInUp">
-                        <h6 class="title text-white">Popular Arricles</h6>
-                        <ul>
-                            <li>
-                                <a href="#0">How to Create an Account</a>
-                            </li>
-                            <li>
-                                <a href="#0" class="active">How Our Pricing Plans Work</a>
-                            </li>
-                            <li>
-                                <a href="#0">How Does the 14 Day Free Trial
-                                    Work?</a>
-                            </li>
-                            <li>
-                                <a href="#0">How Can I Edit My Already
-                                    Exisiting Page?</a>
-                            </li>
-                            <li>
-                                <a href="#0">How Do I See My Fublished
-                                    Page?</a>
-                            </li>
-                            <li>
-                                <a href="#0">How Can I Edit My Already
-                                    Exisiting Page?</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="faq-wrapper faq-wrapper-2 wow fadeInUp">
-                        <div class="faq-item faq-dark open active">
-                            <div class="faq-title">
-                                <h5 class="title">How interior design is cost?</h5>
-                                <span class="plus"></span>
-                            </div>
-                            <div class="faq-content">
-                                <p>
-                                    Grursus mal suada faci lisis Lorem ipsum dolarorit more a ametion consectetur elit. Vesti at bulum nec odio aea the dumm ipsumm ipsum that dolocons rsus suada fadolorit to the consectetur elit dummy text ready.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faq-item faq-dark">
-                            <div class="faq-title">
-                                <h5 class="title">How much time I will spend on planning?</h5>
-                                <span class="plus"></span>
-                            </div>
-                            <div class="faq-content">
-                                <p>
-                                    Grursus mal suada faci lisis Lorem ipsum dolarorit more a ametion consectetur elit. Vesti at bulum nec odio aea the dumm ipsumm ipsum that dolocons rsus suada fadolorit to the consectetur elit dummy text ready.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faq-item faq-dark">
-                            <div class="faq-title">
-                                <h5 class="title">Can i specify delivery date when ordering?</h5>
-                                <span class="plus"></span>
-                            </div>
-                            <div class="faq-content">
-                                <p>
-                                    Grursus mal suada faci lisis Lorem ipsum dolarorit more a ametion consectetur elit. Vesti at bulum nec odio aea the dumm ipsumm ipsum that dolocons rsus suada fadolorit to the consectetur elit dummy text ready.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faq-item faq-dark">
-                            <div class="faq-title">
-                                <h5 class="title">The question is: Is this what we really want?</h5>
-                                <span class="plus"></span>
-                            </div>
-                            <div class="faq-content">
-                                <p>
-                                    Grursus mal suada faci lisis Lorem ipsum dolarorit more a ametion consectetur elit. Vesti at bulum nec odio aea the dumm ipsumm ipsum that dolocons rsus suada fadolorit to the consectetur elit dummy text ready.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Faqs Section -->
-
-    <!-- Contact Section -->
-    <section class="contact-section position-relative half-bg--dark-16">
-        <div class="container">
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-5 wow fadeInUp">
-                    <div class="contact__wrapper bg-10 cl-white h-100">
-                        <div class="section-header mb-4">
-                            <h6 class="section-name mb-3">LET'S TALK</h6>
-                            <h3 class="section-title">Speak With Expert
-                                Engineers.</h3>
+                <div class="col-lg-3 col-md-6 wow fadeInUp">
+                    <div class="choose-card text-center bg-white rounded-3 p-4 shadow">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-user-shield fa-2x text-gradient"></i>
                         </div>
-                        <div class="row g-4">
-                            <div class="col-md-12">
-                                <div class="contact__item">
-                                    <div class="contact__icon">
-                                        <i class="las la-phone-volume"></i>
+                        <p>
+                           Web3-native team with real-world advisory experience
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp">
+                    <div class="choose-card text-center bg-white rounded-3 p-4 shadow">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-lightbulb fa-2x text-gradient"></i>
+                        </div>
+                        <p>
+                           Deep understanding of crypto, tokens, DAOs & blockchain protocols                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp">
+                    <div class="choose-card text-center bg-white rounded-3 p-4 shadow">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-handshake fa-2x text-gradient"></i>
+                        </div>
+                       <p>
+                            From whitepaper to launch to DAO maturity—we're with you at every step.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp">
+                    <div class="choose-card text-center bg-white rounded-3 p-4 shadow">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-rocket fa-2x text-gradient"></i>
+                        </div>
+                        <p>
+                              Trusted by founders, investors, and Web3-native communities                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp">
+                    <div class="choose-card text-center bg-white rounded-3 p-4 shadow">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-building fa-2x text-gradient"></i>
+                        </div>
+                        <p>
+                              Tailored strategies for each client—no one-size-fits-all                       </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp">
+                    <div class="choose-card text-center bg-white rounded-3 p-4 shadow">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-brain fa-2x text-gradient"></i>
+                        </div>
+                        <p>
+                              Design-meets-utility approach for user-centric growth                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- <style>
+            .why-choose-us-section {
+                background: linear-gradient(90deg, #7b2ff2 0%, #f357a8 100%);
+            }
+            .choose-card {
+                transition: box-shadow .3s;
+            }
+            .choose-card:hover {
+                box-shadow: 0 12px 36px rgba(123,47,242,0.15);
+            }
+            .choose-icon .text-gradient {
+                background: linear-gradient(90deg,#7b2ff2,#f357a8);
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+        </style> -->
+    </div>
+    <!-- Why Choose Us Section -->
+
+    <!-- Enhanced Currency Calculator Section -->
+    <section class="calculation-section gradient-1 position-relative py-120" style="overflow:hidden;">
+        <!-- Animated Background Elements -->
+       
+        <div class="container"></div>
+                <div class="calculation-wrapper-inner rounded-4 shadow-lg bg-gradient" style="background: linear-gradient(135deg,#7b2ff2 0%,#f357a8 100%); padding: 40px 32px; position:relative;">
+                    <div class="section-header-3 text-center mb-5">
+                        <h6 class="cate text-white mb-2 animate__animated animate__fadeInDown">Real-Time Exchange Rates</h6>
+                        <span class="shape"></span>
+                        <h3 class="title text-white mb-3 animate__animated animate__fadeInDown">Crypto & Fiat Currency Calculator</h3>
+                        <p class="text-white-50 mb-4 animate__animated animate__fadeInDown">Get instant currency conversions with live market rates</p>
+                    </div>
+                    <div class="currency-calculator">
+                        <div class="calculator-card p-4 rounded-3 bg-white position-relative animate__animated animate__fadeInUp" style="box-shadow:0 8px 32px rgba(123,47,242,0.12);">
+                            <div class="row g-4 align-items-center">
+                                <!-- From Currency -->
+                                <div class="col-lg-5">
+                                    <div class="currency-input-group">
+                                        <label class="currency-label text-dark fw-bold mb-2">
+                                            <i class="fas fa-arrow-down text-success me-2"></i>From
+                                        </label>
+                                        <div class="currency-input-wrapper d-flex align-items-center gap-2">
+                                            <div class="currency-symbol-display from-symbol fs-3 fw-bold text-gradient" style="background:linear-gradient(90deg,#7b2ff2,#f357a8);-webkit-background-clip:text;color:transparent;">$</div>
+                                            <input type="number" id="fromAmount" class="form-control currency-input border-0 bg-light px-3 py-2 rounded-2 shadow-sm" placeholder="1.00" value="1" min="0" step="0.01" style="width:110px;">
+                                            <div class="currency-select-wrapper ms-2">
+                                                <select id="fromCurrency" class="currency-select form-select border-0 bg-gradient text-white fw-semibold" style="background:linear-gradient(90deg,#7b2ff2,#f357a8);color:#fff;">
+                                                    <option value="BTC" data-symbol="₿" data-name="Bitcoin">Bitcoin (BTC)</option>
+                                                    <option value="ETH" data-symbol="Ξ" data-name="Ethereum">Ethereum (ETH)</option>
+                                                    <option value="USDT" data-symbol="₮" data-name="Tether">Tether (USDT)</option>
+                                                    <option value="BNB" data-symbol="BNB" data-name="Binance Coin">Binance Coin (BNB)</option>
+                                                    <option value="ADA" data-symbol="₳" data-name="Cardano">Cardano (ADA)</option>
+                                                    <option value="DOT" data-symbol="●" data-name="Polkadot">Polkadot (DOT)</option>
+                                                    <option value="LINK" data-symbol="🔗" data-name="Chainlink">Chainlink (LINK)</option>
+                                                    <option value="XRP" data-symbol="✖" data-name="Ripple">Ripple (XRP)</option>
+                                                    <option value="LTC" data-symbol="Ł" data-name="Litecoin">Litecoin (LTC)</option>
+                                                    <option value="BCH" data-symbol="₿" data-name="Bitcoin Cash">Bitcoin Cash (BCH)</option>
+                                                    <option value="USD" data-symbol="$" data-name="US Dollar" selected>US Dollar (USD)</option>
+                                                    <option value="EUR" data-symbol="€" data-name="Euro">Euro (EUR)</option>
+                                                    <option value="GBP" data-symbol="£" data-name="British Pound">British Pound (GBP)</option>
+                                                    <option value="JPY" data-symbol="¥" data-name="Japanese Yen">Japanese Yen (JPY)</option>
+                                                    <option value="CAD" data-symbol="C$" data-name="Canadian Dollar">Canadian Dollar (CAD)</option>
+                                                    <option value="AUD" data-symbol="A$" data-name="Australian Dollar">Australian Dollar (AUD)</option>
+                                                    <option value="CHF" data-symbol="CHF" data-name="Swiss Franc">Swiss Franc (CHF)</option>
+                                                    <option value="CNY" data-symbol="¥" data-name="Chinese Yuan">Chinese Yuan (CNY)</option>
+                                                    <option value="INR" data-symbol="₹" data-name="Indian Rupee">Indian Rupee (INR)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="currency-info mt-2">
+                                            <span class="currency-name fw-semibold" id="fromCurrencyName">US Dollar</span>
+                                            <span class="currency-rate text-muted ms-2" id="fromCurrencyRate">1 USD = $1.00</span>
+                                        </div>
                                     </div>
-                                    <div class="contact__content">
-                                        <h6 class="title">Call us on:</h6>
-                                        <span class="info"> + 03601 885399</span>
+                                </div>
+                                <!-- Swap Button -->
+                                <div class="col-lg-2 text-center">
+                                    <button type="button" id="swapBtn" class="swap-btn btn btn-gradient rounded-circle shadow animate__animated animate__bounceIn" title="Swap Currencies" style="width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#7b2ff2,#f357a8);color:#fff;font-size:1.5rem;">
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </button>
+                                </div>
+                                <!-- To Currency -->
+                                <div class="col-lg-5">
+                                    <div class="currency-input-group">
+                                        <label class="currency-label text-dark fw-bold mb-2">
+                                            <i class="fas fa-arrow-up text-primary me-2"></i>To
+                                        </label>
+                                        <div class="currency-input-wrapper d-flex align-items-center gap-2">
+                                            <div class="currency-symbol-display to-symbol fs-3 fw-bold text-gradient" style="background:linear-gradient(90deg,#f357a8,#7b2ff2);-webkit-background-clip:text;color:transparent;">$</div>
+                                            <input type="text" id="toAmount" class="form-control currency-input border-0 bg-light px-3 py-2 rounded-2 shadow-sm" placeholder="0.00" readonly style="width:110px;">
+                                            <div class="currency-select-wrapper ms-2">
+                                                <select id="toCurrency" class="currency-select form-select border-0 bg-gradient text-white fw-semibold" style="background:linear-gradient(90deg,#f357a8,#7b2ff2);color:#fff;">
+                                                    <option value="USD" data-symbol="$" data-name="US Dollar" selected>US Dollar (USD)</option>
+                                                    <option value="EUR" data-symbol="€" data-name="Euro">Euro (EUR)</option>
+                                                    <option value="GBP" data-symbol="£" data-name="British Pound">British Pound (GBP)</option>
+                                                    <option value="JPY" data-symbol="¥" data-name="Japanese Yen">Japanese Yen (JPY)</option>
+                                                    <option value="CAD" data-symbol="C$" data-name="Canadian Dollar">Canadian Dollar (CAD)</option>
+                                                    <option value="AUD" data-symbol="A$" data-name="Australian Dollar">Australian Dollar (AUD)</option>
+                                                    <option value="CHF" data-symbol="CHF" data-name="Swiss Franc">Swiss Franc (CHF)</option>
+                                                    <option value="CNY" data-symbol="¥" data-name="Chinese Yuan">Chinese Yuan (CNY)</option>
+                                                    <option value="INR" data-symbol="₹" data-name="Indian Rupee">Indian Rupee (INR)</option>
+                                                    <option value="BTC" data-symbol="₿" data-name="Bitcoin">Bitcoin (BTC)</option>
+                                                    <option value="ETH" data-symbol="Ξ" data-name="Ethereum">Ethereum (ETH)</option>
+                                                    <option value="USDT" data-symbol="₮" data-name="Tether">Tether (USDT)</option>
+                                                    <option value="BNB" data-symbol="BNB" data-name="Binance Coin">Binance Coin (BNB)</option>
+                                                    <option value="ADA" data-symbol="₳" data-name="Cardano">Cardano (ADA)</option>
+                                                    <option value="DOT" data-symbol="●" data-name="Polkadot">Polkadot (DOT)</option>
+                                                    <option value="LINK" data-symbol="🔗" data-name="Chainlink">Chainlink (LINK)</option>
+                                                    <option value="XRP" data-symbol="✖" data-name="Ripple">Ripple (XRP)</option>
+                                                    <option value="LTC" data-symbol="Ł" data-name="Litecoin">Litecoin (LTC)</option>
+                                                    <option value="BCH" data-symbol="₿" data-name="Bitcoin Cash">Bitcoin Cash (BCH)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="currency-info mt-2">
+                                            <span class="currency-name fw-semibold" id="toCurrencyName">US Dollar</span>
+                                            <span class="currency-rate text-muted ms-2" id="toCurrencyRate">1 USD = $1.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Exchange Rate Display -->
+                                <div class="col-12 mt-3">
+                                    <div class="exchange-rate-display d-flex flex-wrap justify-content-between align-items-center bg-gradient rounded-2 px-3 py-2 animate__animated animate__fadeIn" style="background:linear-gradient(90deg,#7b2ff2,#f357a8);color:#fff;">
+                                        <div class="rate-info">
+                                            <span class="rate-label fw-semibold">
+                                                <i class="fas fa-chart-line me-2"></i>Exchange Rate:
+                                            </span>
+                                            <span id="exchangeRate" class="rate-value">1 USD = 1.00 USD</span>
+                                        </div>
+                                        <div class="rate-details d-flex gap-4">
+                                            <div class="rate-change">
+                                                <span class="change-label">24h Change:</span>
+                                                <span id="rateChange" class="change-value positive">+2.5%</span>
+                                            </div>
+                                            <div class="last-updated">
+                                                <i class="fas fa-clock"></i>
+                                                <span id="lastUpdated">Last updated: Just now</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Action Buttons -->
+                                <div class="col-12 text-center mt-4">
+                                    <div class="calculator-actions d-flex justify-content-center gap-3">
+                                        <button type="button" id="convertBtn" class="cmn--btn bg-7 h--60px px-5 animate__animated animate__pulse animate__infinite">
+                                            <i class="fas fa-calculator me-2"></i>Convert Now
+                                        </button>
+                                        <button type="button" id="resetBtn" class="cmn--btn btn--transparent h--60px px-4">
+                                            <i class="fas fa-redo me-2"></i>Reset
+                                        </button>
+                                        <button type="button" id="historyBtn" class="cmn--btn btn--outline h--60px px-4">
+                                            <i class="fas fa-history me-2"></i>History
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="contact__item">
-                                    <div class="contact__icon">
-                                        <i class="las la-envelope-open-text"></i>
-                                    </div>
-                                    <div class="contact__content">
-                                        <h6 class="title">Email us directly</h6>
-                                        <span class="info">info@website.com</span>
+                        </div>
+                        <!-- Popular Conversions -->
+                        <div class="popular-conversions mt-5">
+                            <h5 class="text-white mb-4 text-center animate__animated animate__fadeInUp">Popular Conversions</h5>
+                            <div class="row g-3 justify-content-center">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="quick-conversion bg-gradient rounded-3 p-3 text-center shadow animate__animated animate__fadeInUp" data-from="BTC" data-to="USD" style="background:linear-gradient(90deg,#7b2ff2,#f357a8);color:#fff;">
+                                        <div class="conversion-icon fs-2 mb-2">
+                                            <i class="fab fa-bitcoin"></i>
+                                        </div>
+                                        <div class="conversion-info">
+                                            <span class="conversion-pair fw-semibold">BTC → USD</span>
+                                            <span class="conversion-rate d-block mt-1" id="btc-usd">$0.00</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="contact__item">
-                                    <div class="contact__icon">
-                                        <i class="las la-map-marker-alt"></i>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="quick-conversion bg-gradient rounded-3 p-3 text-center shadow animate__animated animate__fadeInUp" data-from="ETH" data-to="USD" style="background:linear-gradient(90deg,#f357a8,#7b2ff2);color:#fff;">
+                                        <div class="conversion-icon fs-2 mb-2">
+                                            <i class="fab fa-ethereum"></i>
+                                        </div>
+                                        <div class="conversion-info">
+                                            <span class="conversion-pair fw-semibold">ETH → USD</span>
+                                            <span class="conversion-rate d-block mt-1" id="eth-usd">$0.00</span>
+                                        </div>
                                     </div>
-                                    <div class="contact__content">
-                                        <h6 class="title">Our Location</h6>
-                                        <span class="info">229 Young Street Irwin, PA 15642</span>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="quick-conversion bg-gradient rounded-3 p-3 text-center shadow animate__animated animate__fadeInUp" data-from="USD" data-to="EUR" style="background:linear-gradient(90deg,#7b2ff2,#f357a8);color:#fff;">
+                                        <div class="conversion-icon fs-2 mb-2">
+                                            <i class="fas fa-euro-sign"></i>
+                                        </div>
+                                        <div class="conversion-info">
+                                            <span class="conversion-pair fw-semibold">USD → EUR</span>
+                                            <span class="conversion-rate d-block mt-1" id="usd-eur">€0.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="quick-conversion bg-gradient rounded-3 p-3 text-center shadow animate__animated animate__fadeInUp" data-from="USD" data-to="GBP" style="background:linear-gradient(90deg,#f357a8,#7b2ff2);color:#fff;">
+                                        <div class="conversion-icon fs-2 mb-2">
+                                            <i class="fas fa-pound-sign"></i>
+                                        </div>
+                                        <div class="conversion-info">
+                                            <span class="conversion-pair fw-semibold">USD → GBP</span>
+                                            <span class="conversion-rate d-block mt-1" id="usd-gbp">£0.00</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7 wow fadeInUp">
-                    <div class="contact__wrapper p-35 h-100">
+            </div>
+        </div>
+        <style>
+            .calculator-bg-shapes .calc-circle-1, .calculator-bg-shapes .calc-circle-2 {
+                position: absolute; border-radius: 50%; opacity: 0.15; z-index: 0;
+            }
+            .calculator-bg-shapes .calc-circle-1 { width: 180px; height: 180px; top: -60px; left: -60px; background: #7b2ff2; }
+            .calculator-bg-shapes .calc-circle-2 { width: 120px; height: 120px; bottom: -40px; right: -40px; background: #f357a8; }
+            .calculator-bg-shapes .calc-floating-shape { position: absolute; width: 60px; height: 60px; border-radius: 50%; opacity: 0.18; }
+            .calculator-bg-shapes .shape-1 { top: 40%; left: 0; background: #7b2ff2; }
+            .calculator-bg-shapes .shape-2 { bottom: 30%; right: 0; background: #f357a8; }
+            .btn-gradient { background: linear-gradient(90deg,#7b2ff2,#f357a8); color: #fff; border: none; }
+            .text-gradient { background: linear-gradient(90deg,#7b2ff2,#f357a8); -webkit-background-clip: text; color: transparent; }
+            .calculator-card { transition: box-shadow .3s; }
+            .calculator-card:hover { box-shadow:0 16px 48px rgba(123,47,242,0.18); }
+            .currency-select { min-width: 140px; }
+            .swap-btn:active { transform: rotate(180deg); transition: transform .4s; }
+            .exchange-rate-display { font-size: 1.1rem; }
+            .popular-conversions .quick-conversion { cursor:pointer; transition:transform .2s,box-shadow .2s; }
+            .popular-conversions .quick-conversion:hover { transform:scale(1.06); box-shadow:0 8px 32px rgba(123,47,242,0.18); }
+            @media (max-width: 991px) {
+                .calculation-wrapper-inner { padding: 24px 8px; }
+                .calculator-card { padding: 16px 8px; }
+            }
+        </style>
+        <!-- Animate.css CDN for animations -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </section>
+    <!-- Enhanced Currency Calculator Section -->
+
+    <!-- Faqs Section -->
+    <section class="faqs-section pt-120 pb-60" id="faq">
+        <div class="container">
+            <div class="section-header-3 wow fadeInUp">
+                <h3 class="title">Frequently Asked Questions</h3>
+            </div>
+            <div class="faq-wrapper-3 faq-wrapper faq--wrapper-dark wow fadeInUp">
+                <div class="faq-item border active open">
+                    <div class="faq-title">
+                        <h5 class="title">How interior design is cost?</h5>
+                        <span class="plus"></span>
+                    </div>
+                    <div class="faq-content">
+                        <p>
+                            There are many variations of passages of Lorem Ipsum dumm available majority have suffered alteration some to form injected anything embarrassing.There are variations of passages of Lorem Ipsum dumm available at but the majority have suffered alteration some to form injected anything embarrassing.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item border">
+                    <div class="faq-title">
+                        <h5 class="title">How much time I will spend on planning?</h5>
+                        <span class="plus"></span>
+                    </div>
+                    <div class="faq-content">
+                        <p>
+                            There are many variations of passages of Lorem Ipsum dumm available majority have suffered alteration some to form injected anything embarrassing.There are variations of passages of Lorem Ipsum dumm available at but the majority have suffered alteration some to form injected anything embarrassing.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item border">
+                    <div class="faq-title">
+                        <h5 class="title">Can i specify delivery date when ordering?</h5>
+                        <span class="plus"></span>
+                    </div>
+                    <div class="faq-content">
+                        <p>
+                            There are many variations of passages of Lorem Ipsum dumm available majority have suffered alteration some to form injected anything embarrassing.There are variations of passages of Lorem Ipsum dumm available at but the majority have suffered alteration some to form injected anything embarrassing.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item border">
+                    <div class="faq-title">
+                        <h5 class="title">The question is: Is this what we really want?</h5>
+                        <span class="plus"></span>
+                    </div>
+                    <div class="faq-content">
+                        <p>
+                            There are many variations of passages of Lorem Ipsum dumm available majority have suffered alteration some to form injected anything embarrassing.There are variations of passages of Lorem Ipsum dumm available at but the majority have suffered alteration some to form injected anything embarrassing.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item border">
+                    <div class="faq-title">
+                        <h5 class="title">What is 3D desing and how it work?</h5>
+                        <span class="plus"></span>
+                    </div>
+                    <div class="faq-content">
+                        <p>
+                            There are many variations of passages of Lorem Ipsum dumm available majority have suffered alteration some to form injected anything embarrassing.There are variations of passages of Lorem Ipsum dumm available at but the majority have suffered alteration some to form injected anything embarrassing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Faqs Section -->
+
+
+    <!-- Contact Section -->
+    <section class="contact-section position-relative pt-60">
+        <div class="container">
+            <div class="contact__wrapper-2 mb--60">
+                <div class="map-shape bg_img bg_contain" data-img="./assets/images/shapes-bg/map-bg2.png"></div>
+                <div class="row g-4 justify-content-center align-items-center position-relative">
+                    <div class="col-lg-7 wow fadeInUp">
                         <div class="section-header mb-4">
-                            <h3 class="section-title">Contact Us</h3>
+                            <h3 class="section-title">Need a hand?</h3>
+                            <p>Reach out to the world’s most reliable cryptocurrency.</p>
                         </div>
-                        <form class="contact__form row g-3">
-                            <div class="col-lg-12">
-                                <div class="form--group m-0">
-                                    <input type="text" class="form-control form--control-2 h--60px" placeholder="Your Name*">
+                        <div class="contact__wrapper contact__wrapper-3 me-lg-5">
+                            <form class="contact__form row g-3">
+                                <div class="col-lg-6">
+                                    <div class="form--group m-0">
+                                        <input type="text" class="form-control form--control-2" placeholder="Your Name*">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form--group m-0">
+                                        <input type="text" class="form-control form--control-2" placeholder="Email Address*">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form--group m-0">
+                                    <div class="select-item">
+                                        <select name="subject" id="subject" class="select-bar form--control-2">
+                                            <option value="1">Subjects</option>
+                                            <option value="1">Subjects</option>
+                                            <option value="1">Subjects</option>
+                                            <option value="1">Subjects</option>
+                                            <option value="1">Subjects</option>
+                                            <option value="1">Subjects</option>
+                                            <option value="1">Subjects</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form--group m-0">
+                                        <textarea class="form-control form--control-2" placeholder="Ask any question..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group mb-0">
+                                        <button class="cmn--btn bg-12" type="submit">Submit Now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 wow fadeInUp">
+                        <div class="contact__wrapper shadow-none p-0">
+                            <div class="section-header mb-4">
+                                <h6 class="section-name mb-3">REACH OUT NOW!</h6>
+                                <h4 class="section-title">(+00) 123 567990</h4>
+                                <p>Start the collaboration with us while figuring out the best solution based on your needs.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-12">
+                                    <div class="contact__item">
+                                        <div class="contact__icon cl-12">
+                                            <i class="las la-phone-volume"></i>
+                                        </div>
+                                        <div class="contact__content">
+                                            <h6 class="title">Call us on:</h6>
+                                            <span class="info"> + 03601 885399</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="contact__item">
+                                        <div class="contact__icon cl-12">
+                                            <i class="las la-envelope-open-text"></i>
+                                        </div>
+                                        <div class="contact__content">
+                                            <h6 class="title">Email us directly</h6>
+                                            <span class="info">info@website.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="contact__item">
+                                        <div class="contact__icon cl-12">
+                                            <i class="las la-map-marker-alt"></i>
+                                        </div>
+                                        <div class="contact__content">
+                                            <h6 class="title">Our Location</h6>
+                                            <span class="info">229 Young Street Irwin, PA 15642</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
-                                <div class="form--group m-0">
-                                    <input type="text" class="form-control form--control-2 h--60px" placeholder="Your Phone*">
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form--group m-0">
-                                    <textarea class="form-control form--control-2" placeholder="Ask any question..."></textarea>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group mb-0">
-                                    <button class="cmn--btn bg-10" type="submit">Submit Now</button>
-                                </div>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Contact Section -->
+
 
     <!-- Footer Section -->
     <footer class="footer-section-2 gradient-1 position-relative overflow-hidden">
@@ -1165,6 +864,7 @@
     </footer>
     <!-- Footer Section -->
 
+
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/isotope.pkgd.min.js"></script>
@@ -1196,23 +896,24 @@
             var options = {
                 title: 'Token Distribution',
                 is3D: true,
-                backgroundColor: '#202987',
+                backgroundColor: '#f5f8ff',
                 color: 'red',
                 fontSize: 16,
                 bold: true,
                 italic: true,
                 titleTextStyle: {
-                    color: '#fff',
+                    color: '#000',
                 },
                 legend : {
                     textStyle: {
-                        color: 'white', fontSize: 16
+                        color: 'black', fontSize: 16
                     }
                 }
             };
             var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
             chart.draw(data, options);
         }
+
 
         // Chart Two 
         google.charts.load("current", {packages:["corechart"]});
@@ -1233,17 +934,17 @@
                 14: {offset: 0.4},
                 15: {offset: 0.5},
             },
-                backgroundColor: '#202987',
+                backgroundColor: '#f5f8ff',
             color: 'red',
             fontSize: 16,
             bold: true,
             italic: true,
             titleTextStyle: {
-                color: '#fff',
+                color: '#000',
             },
             legend : {
                 textStyle: {
-                    color: 'white', fontSize: 16
+                    color: 'black', fontSize: 16
                 }
             },
             legend: 'none',
@@ -1254,6 +955,50 @@
         }
     </script>
     <!-- Google Charts -->
+
+    <!-- Pricing Google Charts -->
+    <script>
+        google.charts.load('current', {packages: ['corechart', 'line']});
+        google.charts.setOnLoadCallback(drawCurveTypes);
+
+        function drawCurveTypes() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'X');
+            data.addColumn('number', 'Dogs');
+            data.addColumn('number', 'Cats');
+
+            data.addRows([
+                [0, 0, 0],    [1, 10, 5],   [2, 23, 15],  [3, 17, 9],   [4, 18, 10],  [5, 9, 5],
+                [6, 11, 3],   [7, 27, 19],  [8, 33, 25],  [9, 40, 32],  [10, 32, 24], [11, 35, 27],
+                [12, 30, 22], [13, 40, 32], [14, 42, 34], [15, 47, 39], [16, 44, 36], [17, 48, 40],
+                [18, 52, 44], [19, 54, 46], [20, 42, 34], [21, 55, 47], [22, 56, 48], [23, 57, 49],
+                [24, 60, 52], [25, 50, 42], [26, 52, 44], [27, 51, 43], [28, 49, 41], [29, 53, 45],
+                [30, 55, 47], [31, 60, 52], [32, 61, 53], [33, 59, 51], [34, 62, 54], [35, 65, 57],
+                [36, 62, 54], [37, 58, 50], [38, 55, 47], [39, 61, 53], [40, 64, 56], [41, 65, 57],
+                [42, 63, 55], [43, 66, 58], [44, 67, 59], [45, 69, 61], [46, 69, 61], [47, 70, 62],
+                [48, 72, 64], [49, 68, 60], [50, 66, 58], [51, 65, 57], [52, 67, 59], [53, 70, 62],
+                [54, 71, 63], [55, 72, 64], [56, 73, 65], [57, 75, 67], [58, 70, 62], [59, 68, 60],
+                [60, 64, 56], [61, 60, 52], [62, 65, 57], [63, 67, 59], [64, 68, 60], [65, 69, 61],
+                [66, 70, 62], [67, 72, 64], [68, 75, 67], [69, 80, 72]
+            ]);
+
+            var options = {
+                hAxis: {
+                title: 'Time'
+                },
+                vAxis: {
+                title: 'Popularity'
+                },
+                series: {
+                1: {curveType: 'function'}
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+            }
+    </script>
+    <!-- Pricing Google Charts -->
 </body>
 
 </html>
