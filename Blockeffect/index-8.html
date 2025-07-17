@@ -40,7 +40,7 @@
         <div class="container">
             <div class="header-area">
                 <div class="logo me-auto">
-                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
+                    <a href="index-8.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
                 </div>
                 <ul class="menu">
                     <li>
@@ -60,7 +60,7 @@
                     </li>
                 </ul>
                 <div class="header-buttons d-none d-md-flex">
-                    <a href="contact.html#contact#header" class="cmn--btn btn--transparent btn-pill header-btn-white-hover">Get In Touch</a>
+                    <a href="contact.html#contact#header" class="cmn--btn btn--transparent btn-box header-btn-white-hover">Get In Touch</a>
                 </div>
                 <style>
                     .header-btn-white-hover:hover,
@@ -101,9 +101,7 @@
 
     <!-- Hero Section -->
     <section class="hero-section-8 gradient-1" style="min-height: 100vh; display: flex; align-items: center; padding: 60px 0 0 0; background-size: cover; background-position: center;">
-        <div class="bottom-shape d-none d-lg-block">
-            <img src="./assets/images/shapes-bg/hero-shape-4.1.png" alt="hero" style="opacity: calc(100);">
-        </div>
+        <div class="hero-shape bg-video" data-img="./assets/images/video/hero-video.mp4" ><video src="./assets/images/video/hero-video.mp4" autoplay muted loop style="opacity: 10%; margin-top: -10%; "></video></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 col-xl-8">
@@ -114,8 +112,8 @@
                                 Empowering Web3 innovation through strategic consulting, crypto insights, and blockchain transformation.
                             </p>
                             <div class="hero-button-group justify-content-center" style="gap: 16px; display: flex; flex-wrap: wrap;">
-                                <a href="#0" class="cmn--btn btn--transparent btn-pill header-btn-white-hover" style="color: #fff; border-color: #fff;">Explore Services</a>
-                                <a href="#0" class="cmn--btn btn--transparent btn-pill header-btn-white-hover" style="color: #fff; border-color: #fff;">Get In Touch</a>
+                                <a href="#0" class="cmn--btn btn--transparent btn-box header-btn-white-hover" style="color: #fff; border-color: #fff;">Explore Services</a>
+                                <a href="#0" class="cmn--btn btn--transparent btn-box header-btn-white-hover" style="color: #fff; border-color: #fff;">Get In Touch</a>
                             </div>
                         </div>
                     </div>
@@ -130,9 +128,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-none d-lg-block wow fadeInRight">
-                    <div class="about--thumb me-4">
-                        <img src="./assets/images/about/about13.png" alt="about">
-                    </div>
+                   <div class="about--thumb me-4" style="animation: fadeIn 2s ease-in-out;">
+    <img src="./assets/images/about/about13.png" alt="about">
+</div>
+
+<!-- Inline CSS for animation (add inside <style> tag or <head>) -->
+<style>
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+</style>
+
                 </div>
                 <div class="col-lg-6 wow fadeInUp">
                     <div class="about--content">
