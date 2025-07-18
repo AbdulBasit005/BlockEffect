@@ -19,6 +19,76 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <style>
+/* Advanced fade-slide animation */
+@keyframes fadeSlideUp {
+    0% { opacity: 0; transform: translateY(60px) scale(0.95);}
+    60% { opacity: 1; transform: translateY(-8px) scale(1.02);}
+    100% { opacity: 1; transform: translateY(0) scale(1);}
+}
+.animated-fade-slide {
+    animation: fadeSlideUp 1.2s cubic-bezier(.23,1.02,.32,1) both;
+}
+
+/* Staggered animation for cards */
+.stagger-parent .stagger-child {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+    transition: all 0.7s cubic-bezier(.23,1.02,.32,1);
+}
+.stagger-parent.in-view .stagger-child {
+    opacity: 1;
+    transform: none;
+}
+.stagger-parent.in-view .stagger-child:nth-child(1) { transition-delay: 0.1s; }
+.stagger-parent.in-view .stagger-child:nth-child(2) { transition-delay: 0.25s; }
+.stagger-parent.in-view .stagger-child:nth-child(3) { transition-delay: 0.4s; }
+.stagger-parent.in-view .stagger-child:nth-child(4) { transition-delay: 0.55s; }
+.stagger-parent.in-view .stagger-child:nth-child(5) { transition-delay: 0.7s; }
+.stagger-parent.in-view .stagger-child:nth-child(6) { transition-delay: 0.85s; }
+
+/* Button hover effect */
+.cmn--btn, .btn-gradient {
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+.cmn--btn:hover, .btn-gradient:hover {
+    box-shadow: 0 8px 32px rgba(123,47,242,0.25), 0 1.5px 8px #f357a8;
+    transform: translateY(-3px) scale(1.04) rotate(-1deg);
+}
+
+/* Floating animation for hero shapes */
+@keyframes floatY {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(-24px);}
+    100% { transform: translateY(0);}
+}
+.hero-shape.bg-video video {
+    animation: floatY 5s ease-in-out infinite;
+}
+
+/* Pulse animation for icons */
+@keyframes pulseIcon {
+    0% { box-shadow: 0 0 0 0 rgba(123,47,242,0.2);}
+    70% { box-shadow: 0 0 0 16px rgba(123,47,242,0);}
+    100% { box-shadow: 0 0 0 0 rgba(123,47,242,0);}
+}
+.choose-icon i, .conversion-icon i {
+    animation: pulseIcon 2.5s infinite;
+}
+
+/* FAQ accordion animation */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s cubic-bezier(.23,1.02,.32,1), opacity 0.5s;
+    opacity: 0;
+}
+.faq-item.active .faq-content {
+    max-height: 400px;
+    opacity: 1;
+}
+</style>
+
 </head>
 
 <body>
@@ -40,11 +110,11 @@
         <div class="container">
             <div class="header-area">
                 <div class="logo me-auto">
-                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
+                    <a href="index-8.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
                 </div>
                 <ul class="menu">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index-8.html">Home</a>
                     </li>
                     <li>
                         <a href="about.html">About</a>
@@ -60,7 +130,7 @@
                     </li>
                 </ul>
                 <div class="header-buttons d-none d-md-flex">
-                    <a href="contact.html#contact#header" class="cmn--btn btn--transparent btn-pill header-btn-white-hover">Get In Touch</a>
+                    <a href="contact.html#contact#header" class="cmn--btn btn--transparent btn-box header-btn-white-hover">Get In Touch</a>
                 </div>
                 <style>
                     .header-btn-white-hover:hover,
@@ -101,9 +171,7 @@
 
     <!-- Hero Section -->
     <section class="hero-section-8 gradient-1" style="min-height: 100vh; display: flex; align-items: center; padding: 60px 0 0 0; background-size: cover; background-position: center;">
-        <div class="bottom-shape d-none d-lg-block">
-            <img src="./assets/images/shapes-bg/hero-shape-4.1.png" alt="hero" style="opacity: calc(100);">
-        </div>
+        <div class="hero-shape bg-video" data-img="./assets/images/video/hero-video.mp4" ><video src="./assets/images/video/hero-video.mp4" autoplay muted loop style="opacity: 10%; margin-top: -10%; "></video></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 col-xl-8">
@@ -114,8 +182,8 @@
                                 Empowering Web3 innovation through strategic consulting, crypto insights, and blockchain transformation.
                             </p>
                             <div class="hero-button-group justify-content-center" style="gap: 16px; display: flex; flex-wrap: wrap;">
-                                <a href="#0" class="cmn--btn btn--transparent btn-pill header-btn-white-hover" style="color: #fff; border-color: #fff;">Explore Services</a>
-                                <a href="#0" class="cmn--btn btn--transparent btn-pill header-btn-white-hover" style="color: #fff; border-color: #fff;">Get In Touch</a>
+                                <a href="#0" class="cmn--btn btn--transparent btn-box header-btn-white-hover" style="color: #fff; border-color: #fff;">Explore Services</a>
+                                <a href="#0" class="cmn--btn btn--transparent btn-box header-btn-white-hover" style="color: #fff; border-color: #fff;">Get In Touch</a>
                             </div>
                         </div>
                     </div>
@@ -130,9 +198,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-none d-lg-block wow fadeInRight">
-                    <div class="about--thumb me-4">
-                        <img src="./assets/images/about/about13.png" alt="about">
-                    </div>
+                   <div class="about--thumb me-4" style="animation: fadeIn 2s ease-in-out;">
+    <img src="./assets/images/about/about13.png" alt="about">
+</div>
+
+<!-- Inline CSS for animation (add inside <style> tag or <head>) -->
+<style>
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+</style>
+
                 </div>
                 <div class="col-lg-6 wow fadeInUp">
                     <div class="about--content">
